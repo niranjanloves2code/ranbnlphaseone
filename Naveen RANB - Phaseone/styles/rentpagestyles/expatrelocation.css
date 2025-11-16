@@ -1,0 +1,125 @@
+ /* Expat Services Specific Styles */
+        .service-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid #e5e7eb;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+            border-color: #10b981;
+        }
+        
+        .package-card {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .package-card.popular::before {
+            content: 'Most Popular';
+            position: absolute;
+            top: 20px;
+            right: -35px;
+            background: #10b981;
+            color: white;
+            padding: 5px 40px;
+            transform: rotate(45deg);
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .package-card:hover {
+            transform: scale(1.03);
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #10b981;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 1.5rem;
+            bottom: -1rem;
+            width: 2px;
+            background: #e5e7eb;
+        }
+        
+        .timeline-item:last-child::after {
+            display: none;
+        }
+        
+        .calculator-input {
+            transition: all 0.3s ease;
+            border: 1px solid #d1d5db;
+        }
+        
+        .calculator-input:focus {
+            border-color: #10b981;
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+        }
+        
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .stagger-delay-1 { animation-delay: 0.1s; }
+        .stagger-delay-2 { animation-delay: 0.2s; }
+        .stagger-delay-3 { animation-delay: 0.3s; }
+        .stagger-delay-4 { animation-delay: 0.4s; }
+        .stagger-delay-5 { animation-delay: 0.5s; }
+        
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            background: rgba(16, 185, 129, 0.1);
+            color: #10b981;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cost-breakdown-item {
+            transition: all 0.3s ease;
+        }
+        
+        .cost-breakdown-item:hover {
+            background: #f9fafb;
+            transform: translateX(5px);
+        }
+        
+        .package-selector {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .package-selector.selected {
+            border-color: #10b981;
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+        }

@@ -1,0 +1,260 @@
+/* === PHASE 4: Featured Neighborhoods Carousel Styles === */
+
+.neighborhood-carousel {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    cursor: grab;
+}
+
+.neighborhood-carousel:active {
+    cursor: grabbing;
+}
+
+.neighborhood-card {
+    flex: 0 0 auto;
+    width: 380px;
+    scroll-snap-align: start;
+    opacity: 0;
+    transform: translateX(50px);
+    animation: slideInFromRight 0.8s ease-out forwards;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.neighborhood-card:nth-child(1) { animation-delay: 0.1s; }
+.neighborhood-card:nth-child(2) { animation-delay: 0.2s; }
+.neighborhood-card:nth-child(3) { animation-delay: 0.3s; }
+.neighborhood-card:nth-child(4) { animation-delay: 0.4s; }
+.neighborhood-card:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes slideInFromRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.neighborhood-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.neighborhood-card.active {
+    border: 2px solid #10b981;
+    box-shadow: 0 20px 40px -10px rgba(16, 185, 129, 0.3);
+}
+
+.neighborhood-image {
+    transition: transform 0.7s ease-in-out;
+    height: 220px;
+    object-fit: cover;
+}
+
+.neighborhood-card:hover .neighborhood-image {
+    transform: scale(1.1);
+}
+
+.neighborhood-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 50%);
+    transition: all 0.3s ease;
+}
+
+.neighborhood-card:hover .neighborhood-overlay {
+    background: linear-gradient(to top, rgba(16, 185, 129, 0.9) 0%, transparent 70%);
+}
+
+/* Carousel Navigation */
+.neighborhood-prev,
+.neighborhood-next {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+#featured-neighborhoods:hover .neighborhood-prev,
+#featured-neighborhoods:hover .neighborhood-next {
+    opacity: 1;
+}
+
+.neighborhood-prev:hover,
+.neighborhood-next:hover {
+    background: #10b981;
+    color: white;
+    border-color: #10b981;
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+    opacity: 0;
+    animation: fadeIn 0.5s ease 1s forwards;
+}
+
+.carousel-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #e5e7eb;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.carousel-indicator.active {
+    background: #10b981;
+    transform: scale(1.2);
+    border-color: #10b981;
+}
+
+.carousel-indicator:hover {
+    background: #34d399;
+    transform: scale(1.1);
+}
+
+/* Neighborhood Stats */
+.neighborhood-stat {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background: #f8fafc;
+    transition: all 0.3s ease;
+}
+
+.neighborhood-stat:hover {
+    background: white;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+/* Scrollbar Hide */
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+/* Auto-scroll Animation */
+@keyframes autoScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-380px * 5 - 1.5rem * 4)); }
+}
+
+.neighborhood-carousel.auto-scroll {
+    animation: autoScroll 30s linear infinite;
+}
+
+.neighborhood-carousel.paused {
+    animation-play-state: paused;
+}
+
+/* Price Tag Animation */
+.neighborhood-price {
+    position: relative;
+    overflow: hidden;
+}
+
+.neighborhood-price::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s;
+}
+
+.neighborhood-card:hover .neighborhood-price::before {
+    left: 100%;
+}
+
+/* Property Count Badge */
+.property-count {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.neighborhood-card:hover .property-count {
+    background: rgba(16, 185, 129, 0.9);
+    color: white;
+}
+
+/* Explore Button Animation */
+.explore-neighborhood {
+    position: relative;
+    overflow: hidden;
+}
+
+.explore-neighborhood::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.explore-neighborhood:hover::before {
+    left: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .neighborhood-card {
+        width: 300px;
+    }
+    
+    .neighborhood-prev,
+    .neighborhood-next {
+        opacity: 1;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .neighborhood-prev {
+        left: 10px;
+        transform: translateY(-50%);
+    }
+    
+    .neighborhood-next {
+        right: 10px;
+        transform: translateY(-50%);
+    }
+    
+    .neighborhood-image {
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .neighborhood-card {
+        width: 280px;
+    }
+    
+    .neighborhood-stat {
+        padding: 1rem;
+    }
+}
+
+/* Loading Animation for Cards */
+.neighborhood-card.loading {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* Intersection Observer Animations */
+.neighborhood-card.visible {
+    opacity: 1;
+    transform: translateX(0);
+}

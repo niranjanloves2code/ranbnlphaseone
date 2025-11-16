@@ -1,0 +1,344 @@
+/* === SELL PAGE: Phase 3 Selling Process Timeline Styles === */
+
+/* Desktop Timeline */
+.timeline-line {
+    background: linear-gradient(90deg, #10b981, #34d399, #10b981);
+    background-size: 200% 100%;
+    animation: timelineFlow 3s ease-in-out infinite;
+}
+
+@keyframes timelineFlow {
+    0%, 100% { background-position: 200% 0; }
+    50% { background-position: -200% 0; }
+}
+
+.arrowhead {
+    opacity: 0.6;
+    animation: arrowheadPulse 2s ease-in-out infinite;
+}
+
+.arrowhead:nth-child(1) { animation-delay: 0s; }
+.arrowhead:nth-child(2) { animation-delay: 0.5s; }
+.arrowhead:nth-child(3) { animation-delay: 1s; }
+
+@keyframes arrowheadPulse {
+    0%, 100% { 
+        opacity: 0.6;
+        transform: translateY(-50%) translateX(-1px);
+    }
+    50% { 
+        opacity: 1;
+        transform: translateY(-50%) translateX(2px);
+    }
+}
+
+/* Process Steps */
+.process-step {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: processStepIn 0.8s ease-out forwards;
+}
+
+.process-step:nth-child(1) { animation-delay: 0.1s; }
+.process-step:nth-child(2) { animation-delay: 0.3s; }
+.process-step:nth-child(3) { animation-delay: 0.5s; }
+.process-step:nth-child(4) { animation-delay: 0.7s; }
+.process-step:nth-child(5) { animation-delay: 0.9s; }
+
+@keyframes processStepIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Step Indicators */
+.step-indicator {
+    position: relative;
+    border: 4px solid white;
+    box-shadow: 0 0 0 3px #10b981, 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.step-indicator::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(16, 185, 129, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+}
+
+.process-step:hover .step-indicator::before {
+    width: 100px;
+    height: 100px;
+}
+
+.process-step:hover .step-indicator {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 4px #10b981, 0 10px 25px -5px rgba(16, 185, 129, 0.4);
+}
+
+/* Step Content */
+.step-content {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.step-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.05), transparent);
+    transition: left 0.6s;
+}
+
+.process-step:hover .step-content::before {
+    left: 100%;
+}
+
+/* Step Icons */
+.step-content .w-16 {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.process-step:hover .step-content .w-16 {
+    transform: rotateY(180deg) scale(1.1);
+}
+
+/* Step Detail Buttons */
+.step-detail-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.step-detail-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.1), transparent);
+    transition: left 0.5s;
+}
+
+.step-detail-btn:hover::before {
+    left: 100%;
+}
+
+/* Mobile Timeline */
+.process-step-mobile {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.process-step-mobile::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.05), transparent);
+    transition: left 0.6s;
+}
+
+.process-step-mobile:hover::before {
+    left: 100%;
+}
+
+.step-indicator-mobile {
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.process-step-mobile:hover .step-indicator-mobile {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3);
+}
+
+/* Process Statistics */
+.process-stat {
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+    background: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.process-stat:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* CTA Buttons */
+.get-personalized-plan-btn,
+.download-process-guide-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.get-personalized-plan-btn::before,
+.download-process-guide-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.get-personalized-plan-btn:hover::before,
+.download-process-guide-btn:hover::before {
+    left: 100%;
+}
+
+/* Duration Badges */
+.process-step .step-indicator > div,
+.process-step-mobile span {
+    transition: all 0.3s ease;
+}
+
+.process-step:hover .step-indicator > div {
+    transform: translateX(-50%) scale(1.1);
+}
+
+/* Active State for Steps */
+.process-step.active .step-indicator,
+.process-step-mobile.active .step-indicator-mobile {
+    background: #059669;
+    transform: scale(1.15);
+    box-shadow: 0 0 0 4px #059669, 0 10px 30px -5px rgba(5, 150, 105, 0.6);
+}
+
+.process-step.active .step-content,
+.process-step-mobile.active {
+    border-color: #10b981;
+    background: linear-gradient(135deg, #ffffff, #f0fdf4);
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(16, 185, 129, 0.25);
+}
+
+/* Connection Line Hover Effects */
+.process-step:hover ~ .timeline-line {
+    background: linear-gradient(90deg, #34d399, #10b981, #34d399);
+    animation: timelineFlowHover 1s ease-in-out infinite;
+}
+
+@keyframes timelineFlowHover {
+    0%, 100% { background-position: 200% 0; }
+    50% { background-position: -200% 0; }
+}
+
+.process-step:hover ~ .arrowhead {
+    opacity: 1;
+    transform: translateY(-50%) translateX(4px);
+    color: #10b981;
+}
+
+/* Mobile Step Details Expansion */
+.step-details-mobile {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.step-details-mobile.expanded {
+    max-height: 500px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .process-step {
+        margin-bottom: 2rem;
+    }
+    
+    .step-indicator {
+        margin: 0 auto 1.5rem auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .process-stat {
+        padding: 1.5rem 1rem;
+    }
+    
+    .process-step-mobile {
+        padding: 1.5rem;
+    }
+    
+    .step-indicator-mobile {
+        width: 40px;
+        height: 40px;
+        font-size: 0.875rem;
+    }
+}
+
+/* Loading Animation for Steps */
+.process-step.loading {
+    background: linear-gradient(90deg, #f8fafc 25%, #e2e8f0 50%, #f8fafc 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+/* Intersection Observer Animations */
+.process-step.visible,
+.process-step-mobile.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Print Styles */
+@media print {
+    .process-step,
+    .process-step-mobile {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #e5e7eb;
+    }
+    
+    .timeline-line,
+    .arrowhead {
+        display: none;
+    }
+}
+
+/* Enhanced Hover Effects for Connection Lines */
+.process-step:nth-child(1):hover ~ .timeline-line {
+    background: linear-gradient(90deg, #34d399, #10b981, #34d399);
+}
+
+.process-step:nth-child(2):hover ~ .timeline-line {
+    background: linear-gradient(90deg, #34d399, #34d399, #10b981, #34d399);
+}
+
+.process-step:nth-child(3):hover ~ .timeline-line {
+    background: linear-gradient(90deg, #34d399, #34d399, #34d399, #10b981, #34d399);
+}
+
+/* Success Animation */
+.process-completed .step-indicator {
+    background: #059669;
+    animation: successPulse 2s ease-in-out infinite;
+}
+
+@keyframes successPulse {
+    0%, 100% { 
+        box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.4);
+    }
+    50% { 
+        box-shadow: 0 0 0 10px rgba(5, 150, 105, 0);
+    }
+}

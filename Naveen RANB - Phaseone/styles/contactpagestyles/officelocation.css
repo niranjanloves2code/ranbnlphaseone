@@ -1,0 +1,96 @@
+/* Office Experience Section Styles */
+.office-experience-section {
+    background: linear-gradient(135deg, #f8fafc 0%, #f0fdfa 100%);
+}
+
+/* Map Container Animations */
+.map-container {
+    transition: all 0.3s ease;
+}
+
+.map-container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Virtual Tour Interactions */
+.virtual-tour-container {
+    transition: all 0.3s ease;
+}
+
+.virtual-tour-container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+}
+
+/* Appointment Booking Animations */
+.appointment-booking {
+    position: relative;
+    overflow: hidden;
+}
+
+.appointment-booking::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+    transform: rotate(45deg);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+/* Trust Elements Styling */
+.trust-social-proof {
+    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+}
+
+/* Fade-in Animation */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Staggered Animation Delays */
+.fade-in-up:nth-child(1) { animation-delay: 0.1s; }
+.fade-in-up:nth-child(2) { animation-delay: 0.2s; }
+.fade-in-up:nth-child(3) { animation-delay: 0.3s; }
+.fade-in-up:nth-child(4) { animation-delay: 0.4s; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .office-experience-section {
+        padding: 3rem 1rem;
+    }
+    
+    .map-container,
+    .virtual-tour-container {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Loading States */
+.map-loading {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}

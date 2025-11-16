@@ -1,0 +1,207 @@
+  /* === MARKETING EXCELLENCE STYLES === */
+        
+        /* Portfolio Carousel */
+        .portfolio-carousel {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .carousel-track {
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .portfolio-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .portfolio-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Before/After Slider */
+        .before-after-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .before-image, .after-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .before-image {
+            z-index: 1;
+            clip-path: polygon(0 0, var(--slider-position, 50%) 0, var(--slider-position, 50%) 100%, 0 100%);
+        }
+        
+        .slider-handle {
+            position: absolute;
+            top: 0;
+            left: var(--slider-position, 50%);
+            width: 4px;
+            height: 100%;
+            background: white;
+            cursor: ew-resize;
+            z-index: 2;
+            transform: translateX(-2px);
+        }
+        
+        .slider-handle::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .slider-handle::before {
+            content: '↔';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #10b981;
+            font-weight: bold;
+            z-index: 3;
+        }
+        
+        /* ROI Calculator */
+        .roi-calculator {
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+            border-radius: 16px;
+        }
+        
+        .roi-slider {
+            
+            width: 100%;
+            height: 6px;
+            border-radius: 3px;
+            background: #d1fae5;
+            outline: none;
+        }
+        
+        .roi-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #10b981;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(16, 185, 129, 0.3);
+        }
+        
+        .roi-slider::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #10b981;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 2px 6px rgba(16, 185, 129, 0.3);
+        }
+        
+        /* Funda Preview */
+        .funda-preview {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .funda-preview:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Statistics Counter */
+        .stat-counter {
+            font-variant-numeric: tabular-nums;
+        }
+        
+        @keyframes countUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .stat-counter.animated {
+            animation: countUp 0.8s ease-out;
+        }
+        
+        /* Virtual Tour Demo */
+        .virtual-tour {
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .tour-controls {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px 15px;
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+        }
+        
+        /* Photography Comparison */
+        .photo-comparison {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .comparison-slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .portfolio-card {
+                min-width: 280px;
+            }
+            
+            .marketing-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Animation Classes */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }

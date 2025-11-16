@@ -1,0 +1,361 @@
+/* === PHASE 6: Dutch Selling Costs Calculator Styles === */
+
+/* Cost Sliders */
+.cost-slider {
+    
+    height: 6px;
+    border-radius: 3px;
+    background: linear-gradient(90deg, #d1fae5, #10b981);
+    outline: none;
+}
+
+.cost-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #10b981;
+    cursor: pointer;
+    border: 3px solid white;
+    box-shadow: 0 2px 6px rgba(16, 185, 129, 0.5);
+    transition: all 0.2s ease;
+}
+
+.cost-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.6);
+}
+
+.cost-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #10b981;
+    cursor: pointer;
+    border: 3px solid white;
+    box-shadow: 0 2px 6px rgba(16, 185, 129, 0.5);
+}
+
+/* Seller Type Selector */
+.seller-type-selector {
+    display: grid;
+    gap: 1rem;
+}
+
+.seller-type-btn {
+    padding: 1.5rem 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    background: white;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.seller-type-btn:hover {
+    border-color: #10b981;
+    transform: translateY(-2px);
+}
+
+.seller-type-btn.active {
+    border-color: #10b981;
+    background: #ecfdf5;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.15);
+}
+
+.seller-type-btn i {
+    color: #6b7280;
+    transition: color 0.3s ease;
+}
+
+.seller-type-btn.active i {
+    color: #10b981;
+}
+
+/* Service Toggles */
+.service-toggle {
+    transition: all 0.3s ease;
+}
+
+.service-toggle:hover {
+    border-color: #10b981;
+    background: #f0fdf4;
+}
+
+.service-checkbox:checked ~ div .font-semibold {
+    color: #10b981;
+}
+
+.service-toggle:has(.service-checkbox:checked) {
+    border-color: #10b981;
+    background: #ecfdf5;
+}
+
+/* Net Proceeds Card */
+.net-proceeds-card {
+    background: linear-gradient(135deg, #10b981, #047857);
+    border-radius: 16px;
+    padding: 2rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.net-proceeds-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(-10px, -10px) rotate(1deg); }
+}
+
+/* Cost Breakdown Chart */
+.cost-chart-container {
+    position: relative;
+    margin: 0 auto;
+}
+
+.cost-chart-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* Cost Legend */
+.cost-legend-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.cost-legend-item:hover {
+    background: #f8fafc;
+}
+
+.legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 0.75rem;
+}
+
+.legend-label {
+    flex: 1;
+    font-size: 0.875rem;
+    color: #374151;
+}
+
+.legend-value {
+    font-weight: 600;
+    color: #10b981;
+}
+
+/* Comparative Bars */
+.comparison-bar {
+    height: 8px;
+    border-radius: 4px;
+    background: #e5e7eb;
+    position: relative;
+    overflow: hidden;
+}
+
+.comparison-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+
+/* Tax Info Cards */
+.tax-info-card {
+    border-left: 4px solid #10b981;
+    background: #f8fafc;
+}
+
+.tax-warning-card {
+    border-left: 4px solid #f59e0b;
+    background: #fffbeb;
+}
+
+/* Action Buttons */
+.download-report-btn,
+.expert-consultation-btn {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.download-report-btn::before,
+.expert-consultation-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.download-report-btn:hover::before,
+.expert-consultation-btn:hover::before {
+    left: 100%;
+}
+
+/* FAQ Items */
+.faq-item {
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation Classes */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Sticky Sidebar */
+.sticky {
+    position: sticky;
+    top: 6rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .sticky {
+        position: relative;
+        top: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .seller-type-selector {
+        grid-template-columns: 1fr;
+    }
+    
+    .cost-chart-container {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .action-buttons {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .seller-type-btn,
+    .service-toggle,
+    .cost-slider {
+        break-inside: avoid;
+    }
+    
+    .net-proceeds-card {
+        background: #10b981 !important;
+        /* -webkit-print-color-adjust: exact; */
+    }
+}
+
+/* Loading States */
+.calculator-loading {
+    opacity: 0.7;
+    pointer-events: none;
+    position: relative;
+}
+
+.calculator-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #e5e7eb;
+    border-top: 2px solid #10b981;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Number Animations */
+.currency-animate {
+    animation: pulse 0.5s ease-in-out;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Tooltip Styles */
+.tooltip {
+    position: relative;
+    cursor: help;
+}
+
+.tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1f2937;
+    color: white;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+.tooltip:hover::after {
+    opacity: 1;
+}
+
+/* Scrollbar Styling */
+.cost-breakdown::-webkit-scrollbar {
+    width: 6px;
+}
+
+.cost-breakdown::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 3px;
+}
+
+.cost-breakdown::-webkit-scrollbar-thumb {
+    background: #10b981;
+    border-radius: 3px;
+}

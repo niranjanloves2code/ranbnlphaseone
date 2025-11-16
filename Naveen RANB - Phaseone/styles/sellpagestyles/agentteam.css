@@ -1,0 +1,544 @@
+/* === PHASE 7: Agent Team Showcase Styles === */
+
+/* Agent Matching Tool */
+.matching-select {
+    backdrop-filter: blur(10px);
+}
+
+.matching-select option {
+    background: #10b981;
+    color: white;
+}
+
+/* Agent Cards */
+.agent-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f1f5f9;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.agent-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.agent-card.hidden {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Agent Header */
+.agent-header {
+    position: relative;
+}
+
+.agent-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.agent-image img {
+    transition: transform 0.5s ease;
+}
+
+.agent-card:hover .agent-image img {
+    transform: scale(1.05);
+}
+
+.agent-badges {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+}
+
+.badge.premium {
+    background: rgba(245, 158, 11, 0.9);
+    color: white;
+}
+
+.badge.rising {
+    background: rgba(16, 185, 129, 0.9);
+    color: white;
+}
+
+.badge.experience {
+    background: rgba(255, 255, 255, 0.9);
+    color: #1f2937;
+}
+
+.agent-actions {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.action-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.action-btn:hover {
+    background: white;
+    transform: scale(1.1);
+}
+
+.action-btn.favorite:hover {
+    color: #ef4444;
+}
+
+.action-btn.contact:hover {
+    color: #10b981;
+}
+
+/* Agent Content */
+.agent-content {
+    padding: 1.5rem;
+}
+
+.agent-info {
+    margin-bottom: 1rem;
+}
+
+.agent-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.25rem;
+}
+
+.agent-title {
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin-bottom: 0.75rem;
+}
+
+.agent-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.stars {
+    color: #f59e0b;
+}
+
+.rating-text {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+/* Specialties */
+.agent-specialties {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.specialty-tag {
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.specialty-tag.luxury {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.specialty-tag.international {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.specialty-tag.first-time {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.specialty-tag.apartments {
+    background: #f3e8ff;
+    color: #7e22ce;
+}
+
+.specialty-tag.investment {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.specialty-tag.commercial {
+    background: #fce7f3;
+    color: #be185d;
+}
+
+.specialty-tag.family {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.specialty-tag.historical {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+/* Agent Stats */
+.agent-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: #f8fafc;
+    border-radius: 12px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #10b981;
+    margin-bottom: 0.25rem;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+/* Expertise Areas */
+.agent-expertise {
+    margin-bottom: 1rem;
+}
+
+.expertise-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+.expertise-areas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.area-tag {
+    padding: 0.25rem 0.5rem;
+    background: #f1f5f9;
+    color: #475569;
+    border-radius: 8px;
+    font-size: 0.75rem;
+}
+
+/* Languages */
+.agent-languages {
+    margin-bottom: 1rem;
+}
+
+.languages-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+.language-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.language-tag {
+    padding: 0.25rem 0.75rem;
+    background: #ecfdf5;
+    color: #065f46;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+/* Availability */
+.agent-availability {
+    margin-bottom: 1rem;
+}
+
+.availability-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.availability-indicator.available {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.availability-indicator.available i {
+    color: #16a34a;
+}
+
+.availability-indicator.limited {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.availability-indicator.limited i {
+    color: #d97706;
+}
+
+/* Contact Buttons */
+.agent-contact {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+
+.contact-btn {
+    padding: 0.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    background: white;
+    color: #374151;
+    font-size: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.contact-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-btn.whatsapp:hover {
+    border-color: #25d366;
+    color: #25d366;
+}
+
+.contact-btn.call:hover {
+    border-color: #10b981;
+    color: #10b981;
+}
+
+.contact-btn.email:hover {
+    border-color: #ef4444;
+    color: #ef4444;
+}
+
+/* Filter System */
+.agent-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.filter-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: 1px solid #e5e7eb;
+    background: white;
+    color: #6b7280;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: #10b981;
+    color: white;
+    border-color: #10b981;
+}
+
+/* Load More Button */
+.load-more-btn {
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.load-more-btn:hover {
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
+}
+
+/* Animation Classes */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Matching Tool Animation */
+.matching-tool {
+    position: relative;
+    overflow: hidden;
+}
+
+.matching-tool::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(-10px, -10px) rotate(1deg); }
+}
+
+/* Experience Indicators */
+.experience-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.experience-junior {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.experience-mid {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.experience-senior {
+    background: #dcfce7;
+    color: #166534;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .agent-stats {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    
+    .agent-contact {
+        grid-template-columns: 1fr;
+    }
+    
+    .agent-filters {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+    }
+    
+    .agent-badges {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 640px) {
+    .agent-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .matching-tool .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Scrollbar Styling */
+.agent-filters::-webkit-scrollbar {
+    height: 4px;
+}
+
+.agent-filters::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 2px;
+}
+
+.agent-filters::-webkit-scrollbar-thumb {
+    background: #10b981;
+    border-radius: 2px;
+}
+
+/* Favorite Animation */
+.action-btn.favorite.favorited {
+    color: #ef4444;
+    animation: heartBeat 0.6s ease;
+}
+
+@keyframes heartBeat {
+    0%, 100% { transform: scale(1); }
+    25% { transform: scale(1.3); }
+    50% { transform: scale(0.95); }
+    75% { transform: scale(1.1); }
+}
+
+/* Contact Modal */
+.contact-modal {
+    backdrop-filter: blur(8px);
+}
+
+/* Print Styles */
+@media print {
+    .agent-actions,
+    .load-more-btn,
+    .matching-tool {
+        display: none !important;
+    }
+    
+    .agent-card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #e5e7eb;
+    }
+}

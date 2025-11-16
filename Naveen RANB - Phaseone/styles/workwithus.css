@@ -1,0 +1,334 @@
+/* === PHASE 6: Why Buy Through Us Flowchart Styles === */
+
+.flowchart-steps {
+    position: relative;
+    z-index: 10;
+}
+
+/* Connection Lines - Desktop */
+.flowchart-connections {
+    z-index: 5;
+}
+
+.connection-line {
+    transition: all 0.5s ease-in-out;
+    background: linear-gradient(90deg, #a7f3d0, #10b981, #a7f3d0);
+    background-size: 200% 100%;
+    animation: lineFlow 3s ease-in-out infinite;
+}
+
+@keyframes lineFlow {
+    0%, 100% { background-position: 200% 0; }
+    50% { background-position: -200% 0; }
+}
+
+.arrowhead {
+    opacity: 0;
+    animation: arrowPulse 2s ease-in-out infinite;
+    transition: all 0.3s ease;
+}
+
+.arrowhead-1 { animation-delay: 0s; }
+.arrowhead-2 { animation-delay: 0.5s; }
+.arrowhead-3 { animation-delay: 1s; }
+
+@keyframes arrowPulse {
+    0%, 100% { 
+        opacity: 0.5;
+        transform: translateY(-50%) translateX(-1px);
+    }
+    50% { 
+        opacity: 1;
+        transform: translateY(-50%) translateX(2px);
+    }
+}
+
+/* Connection Lines - Mobile */
+.flowchart-connections-mobile {
+    z-index: 5;
+}
+
+.connection-line-mobile {
+    transition: all 0.5s ease-in-out;
+    background: linear-gradient(to bottom, #a7f3d0, #10b981, #a7f3d0);
+    background-size: 100% 200%;
+    animation: lineFlowMobile 3s ease-in-out infinite;
+}
+
+@keyframes lineFlowMobile {
+    0%, 100% { background-position: 0 200%; }
+    50% { background-position: 0 -200%; }
+}
+
+.arrowhead-mobile {
+    opacity: 0;
+    animation: arrowPulseMobile 2s ease-in-out infinite;
+    transition: all 0.3s ease;
+}
+
+.arrowhead-mobile-1 { animation-delay: 0s; }
+.arrowhead-mobile-2 { animation-delay: 0.5s; }
+.arrowhead-mobile-3 { animation-delay: 1s; }
+
+@keyframes arrowPulseMobile {
+    0%, 100% { 
+        opacity: 0.5;
+        transform: translateX(-50%) translateY(-1px);
+    }
+    50% { 
+        opacity: 1;
+        transform: translateX(-50%) translateY(2px);
+    }
+}
+
+/* Flowchart Steps */
+.flowchart-step {
+    position: relative;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: flowchartStepIn 0.8s ease-out forwards;
+}
+
+.flowchart-step:nth-child(1) { animation-delay: 0.1s; }
+.flowchart-step:nth-child(2) { animation-delay: 0.3s; }
+.flowchart-step:nth-child(3) { animation-delay: 0.5s; }
+.flowchart-step:nth-child(4) { animation-delay: 0.7s; }
+
+@keyframes flowchartStepIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.flowchart-step:hover {
+    border: 2px solid #10b981;
+    box-shadow: 0 25px 50px -12px rgba(16, 185, 129, 0.25);
+}
+
+/* Step Number */
+.step-number {
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+    transition: all 0.3s ease;
+}
+
+.flowchart-step:hover .step-number {
+    transform: translateX(-50%) scale(1.2);
+    background: #059669;
+    box-shadow: 0 6px 20px rgba(5, 150, 105, 0.4);
+}
+
+/* Step Icons */
+.step-icon {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.step-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.6s;
+}
+
+.flowchart-step:hover .step-icon::before {
+    left: 100%;
+}
+
+.flowchart-step:hover .step-icon {
+    transform: rotateY(180deg) scale(1.1);
+}
+
+/* Flowchart Metrics */
+.flowchart-metric {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.flowchart-metric::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+    transition: left 0.5s;
+}
+
+.flowchart-step:hover .flowchart-metric::before {
+    left: 100%;
+}
+
+.flowchart-step:hover .flowchart-metric {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Tooltips */
+.step-tooltip {
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(-50%) translateY(10px);
+}
+
+.flowchart-step:hover .step-tooltip {
+    transform: translateX(-50%) translateY(0);
+}
+
+/* CTA Buttons */
+.schedule-consultation-btn,
+.download-brochure-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.schedule-consultation-btn::before,
+.download-brochure-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.schedule-consultation-btn:hover::before,
+.download-brochure-btn:hover::before {
+    left: 100%;
+}
+
+/* Active State for Steps */
+.flowchart-step.active {
+    border: 2px solid #10b981;
+    background: linear-gradient(135deg, #ffffff, #f0fdf4);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 25px 50px -12px rgba(16, 185, 129, 0.3);
+}
+
+.flowchart-step.active .step-number {
+    background: #059669;
+    transform: translateX(-50%) scale(1.3);
+}
+
+.flowchart-step.active .step-icon {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Connection Line Animations on Hover */
+.flowchart-step:hover ~ .flowchart-connections .connection-line,
+.flowchart-step:hover ~ .flowchart-connections-mobile .connection-line-mobile {
+    background: linear-gradient(90deg, #34d399, #10b981, #34d399);
+    background-size: 200% 100%;
+    animation: lineFlowHover 1s ease-in-out infinite;
+}
+
+@keyframes lineFlowHover {
+    0%, 100% { background-position: 200% 0; }
+    50% { background-position: -200% 0; }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .flowchart-steps {
+        gap: 4rem;
+    }
+    
+    .flowchart-step {
+        margin-bottom: 2rem;
+    }
+    
+    .flowchart-step:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .flowchart-step {
+        padding: 1.5rem;
+    }
+    
+    .step-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .step-icon i {
+        font-size: 1.5rem;
+    }
+    
+    .flowchart-metric {
+        font-size: 0.75rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* Loading Animation for Steps */
+.flowchart-step.loading {
+    background: linear-gradient(90deg, #f8fafc 25%, #e2e8f0 50%, #f8fafc 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+/* Intersection Observer Animations */
+.flowchart-step.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Print Styles */
+@media print {
+    .flowchart-connections,
+    .flowchart-connections-mobile {
+        display: none;
+    }
+    
+    .flowchart-step {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #e5e7eb;
+    }
+}
+
+/* Enhanced Hover Effects for Connection Lines */
+.flowchart-step:nth-child(1):hover ~ .flowchart-connections .line-1,
+.flowchart-step:nth-child(2):hover ~ .flowchart-connections .line-2,
+.flowchart-step:nth-child(3):hover ~ .flowchart-connections .line-3 {
+    background: linear-gradient(90deg, #34d399, #10b981, #34d399);
+    height: 3px;
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+}
+
+.flowchart-step:nth-child(1):hover ~ .flowchart-connections .arrowhead-1,
+.flowchart-step:nth-child(2):hover ~ .flowchart-connections .arrowhead-2,
+.flowchart-step:nth-child(3):hover ~ .flowchart-connections .arrowhead-3 {
+    opacity: 1;
+    transform: translateY(-50%) translateX(4px);
+    color: #10b981;
+}
+
+/* Mobile Connection Line Hover Effects */
+.flowchart-step:nth-child(1):hover ~ .flowchart-connections-mobile .line-mobile-1,
+.flowchart-step:nth-child(2):hover ~ .flowchart-connections-mobile .line-mobile-2,
+.flowchart-step:nth-child(3):hover ~ .flowchart-connections-mobile .line-mobile-3 {
+    background: linear-gradient(to bottom, #34d399, #10b981, #34d399);
+    width: 3px;
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+}
+
+.flowchart-step:nth-child(1):hover ~ .flowchart-connections-mobile .arrowhead-mobile-1,
+.flowchart-step:nth-child(2):hover ~ .flowchart-connections-mobile .arrowhead-mobile-2,
+.flowchart-step:nth-child(3):hover ~ .flowchart-connections-mobile .arrowhead-mobile-3 {
+    opacity: 1;
+    transform: translateX(-50%) translateY(4px);
+    color: #10b981;
+}

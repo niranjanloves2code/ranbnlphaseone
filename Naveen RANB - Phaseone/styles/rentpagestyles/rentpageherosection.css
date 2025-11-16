@@ -1,0 +1,281 @@
+/* === RENT PAGE: Phase 1 Hero Section Styles === */
+
+/* Property Carousel */
+.property-carousel {
+    position: relative;
+}
+
+.carousel-slide {
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.carousel-slide.active {
+    opacity: 0.2;
+}
+
+/* Value Counter Animations */
+.value-counter {
+    font-variant-numeric: tabular-nums;
+}
+
+@keyframes countUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.value-counter.animated {
+    animation: countUp 0.8s ease-out;
+}
+
+/* CTA Button Animations */
+.search-rentals-btn,
+.rental-guide-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.search-rentals-btn::before,
+.rental-guide-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.search-rentals-btn:hover::before,
+.rental-guide-btn:hover::before {
+    left: 100%;
+}
+
+/* Trust Badge Animations */
+.trust-badge {
+    animation: slideInDown 0.6s ease-out;
+}
+
+.trust-badge:nth-child(1) { animation-delay: 0.1s; }
+.trust-badge:nth-child(2) { animation-delay: 0.2s; }
+.trust-badge:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Background Pattern */
+.hero-background {
+    background-image: 
+        radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
+}
+
+/* Scroll Indicator Animation */
+.scroll-indicator {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Quick Search Bar */
+.quick-search-bar {
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    .hero-headline {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+    
+    .value-counter {
+        font-size: 2rem;
+    }
+    
+    .quick-search-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Loading States */
+.hero-loading {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.hero-loaded {
+    opacity: 1;
+}
+
+/* Smart CTA Animation */
+.smart-cta {
+    transition: all 0.3s ease;
+}
+
+.smart-cta.scrolled {
+    transform: scale(0.95);
+    opacity: 0.9;
+}
+
+/* Mega Menu Styles */
+.mega-menu-item {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mega-menu-item:hover {
+    transform: translateX(8px);
+}
+
+/* Quick Search Select Styles */
+.quick-search-select {
+    transition: all 0.3s ease;
+}
+
+.quick-search-select:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15);
+}
+
+/* Animation Classes */
+.animate-fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-slide-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 0.8s ease-out forwards;
+}
+
+.animate-slide-up.delay-300 {
+    animation-delay: 0.3s;
+}
+
+.animate-slide-up.delay-500 {
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Background Overlay */
+.hero-overlay {
+    background: linear-gradient(
+        135deg,
+        rgba(248, 250, 252, 0.9) 0%,
+        rgba(236, 253, 245, 0.8) 50%,
+        rgba(209, 250, 229, 0.6) 100%
+    );
+}
+
+/* Button Hover Effects */
+.btn-hover-lift {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.25);
+}
+
+/* Trust Badge Pulse */
+.trust-badge {
+    position: relative;
+    overflow: hidden;
+}
+
+.trust-badge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.1), transparent);
+    transition: left 0.5s;
+}
+
+.trust-badge:hover::before {
+    left: 100%;
+}
+
+/* Value Counter Container */
+.value-counter-container {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border: 1px solid rgba(16, 185, 129, 0.1);
+}
+
+/* Mobile Optimizations */
+@media (max-width: 640px) {
+    .trust-badges {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .value-counters {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .divider {
+        display: none;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .property-carousel,
+    .scroll-indicator,
+    .quick-search-bar {
+        display: none !important;
+    }
+    
+    .hero-section {
+        background: white !important;
+    }
+}

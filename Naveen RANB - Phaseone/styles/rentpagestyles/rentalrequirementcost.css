@@ -1,0 +1,837 @@
+/* === ENHANCED RENTAL REQUIREMENTS & COSTS CALCULATOR STYLES === */
+
+/* Section Styling */
+.rental-calculator-section {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+/* Profile Selector Card */
+.profile-selector-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f1f5f9;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.profile-selector-card:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+.profile-field {
+    display: 0.5rem;
+}
+
+.profile-label {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+}
+
+.profile-label i {
+    margin-right: 0.5rem;
+    color: #10b981;
+}
+
+.profile-select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    background: white;
+    cursor: pointer;
+}
+
+.profile-select:focus {
+    outline: none;
+    border-color: #10b981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+/* Quick Stats Grid */
+.quick-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.quick-stat {
+    text-align: center;
+    padding: 1rem;
+    background: #f8fafc;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+.stat-value {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #10b981;
+    display: block;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin-top: 0.25rem;
+}
+
+/* Requirements Cards */
+.requirements-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f1f5f9;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.requirements-card:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    position: relative;
+}
+
+.card-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    flex: 1;
+}
+
+.card-subtitle {
+    margin: 0;
+    opacity: 0.9;
+    font-size: 0.95rem;
+}
+
+.document-context {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+}
+
+.document-context i {
+    margin-right: 0.5rem;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+/* Calculator Sections */
+.calculator-section {
+    display: 1.5rem;
+}
+
+.section-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.calculator-field {
+    display: 0.5rem;
+}
+
+.calculator-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+}
+
+.calculator-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.calculator-input:focus {
+    outline: none;
+    border-color: #10b981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+/* Income Result */
+.income-result {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+}
+
+.result-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: #10b981;
+    font-weight: 600;
+}
+
+.result-header i {
+    margin-right: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.result-content {
+    display: 0.75rem;
+}
+
+.result-metric {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.metric-label {
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+.metric-value {
+    font-weight: 600;
+    color: #1f2937;
+    font-size: 1.125rem;
+}
+
+.result-status {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem;
+    background: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    border-radius: 8px;
+    color: #065f46;
+    font-weight: 500;
+}
+
+.result-status i {
+    margin-right: 0.5rem;
+}
+
+/* Dynamic Requirements */
+.requirements-info {
+    display: 1.5rem;
+}
+
+.requirements-list {
+    display: 1rem;
+}
+
+.requirement-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 1rem;
+    background: #f8fafc;
+    border-radius: 8px;
+    border-left: 4px solid #10b981;
+    transition: all 0.3s ease;
+}
+
+.requirement-item:hover {
+    transform: translateX(4px);
+    background: #f0fdfa;
+}
+
+.requirement-item i {
+    color: #10b981;
+    margin-right: 1rem;
+    margin-top: 0.25rem;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.requirement-item strong {
+    display: block;
+    color: #1f2937;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+}
+
+.requirement-item p {
+    color: #6b7280;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Smart Document Checklist */
+.document-checklist {
+    display: 2rem;
+}
+
+.document-category {
+    display: 1rem;
+}
+
+.category-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.document-items {
+    display: 0.75rem;
+}
+
+.document-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.document-item:hover {
+    border-color: #10b981;
+    background: #f0fdfa;
+}
+
+.document-checkbox {
+    display: none;
+}
+
+.document-checkmark {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #d1d5db;
+    border-radius: 4px;
+    margin-right: 1rem;
+    position: relative;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.document-checkbox:checked + .document-checkmark {
+    background: #10b981;
+    border-color: #10b981;
+}
+
+.document-checkbox:checked + .document-checkmark::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.document-info {
+    flex: 1;
+}
+
+.document-name {
+    display: block;
+    font-weight: 500;
+    color: #1f2937;
+    margin-bottom: 0.25rem;
+}
+
+.document-status {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.document-help {
+    color: #9ca3af;
+    margin-left: 1rem;
+    cursor: help;
+    transition: color 0.3s ease;
+}
+
+.document-help:hover {
+    color: #10b981;
+}
+
+/* Document Progress */
+.document-progress {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.progress-label {
+    font-weight: 500;
+    color: #374151;
+}
+
+.progress-value {
+    font-weight: 600;
+    color: #10b981;
+    font-size: 1.125rem;
+}
+
+.progress-bar {
+    height: 8px;
+    background: #e5e7eb;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #10b981, #059669);
+    border-radius: 4px;
+    transition: width 0.5s ease;
+    width: 0%;
+}
+
+/* Smart Costs Calculator */
+.costs-calculator {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f1f5f9;
+    position: sticky;
+    top: 2rem;
+}
+
+.calculator-header {
+    padding: 2rem;
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    border-radius: 16px 16px 0 0;
+}
+
+.calculator-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.calculator-subtitle {
+    opacity: 0.9;
+    margin: 0;
+}
+
+.calculator-body {
+    padding: 2rem;
+    display: 1.5rem;
+}
+
+/* Cost Items */
+.cost-item {
+    padding: 1rem;
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.cost-item:hover {
+    border-color: #10b981;
+    background: #f0fdfa;
+}
+
+.cost-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.cost-label {
+    font-weight: 500;
+    color: #374151;
+}
+
+.cost-value {
+    font-weight: 600;
+    color: #1f2937;
+    font-size: 1.125rem;
+}
+
+.cost-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cost-note {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.cost-badge {
+    background: #10b981;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+/* Total Costs */
+.cost-total {
+    border-top: 2px solid #e5e7eb;
+    padding-top: 1.5rem;
+    margin-top: 1rem;
+}
+
+.total-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.total-line:last-child {
+    margin-bottom: 0;
+}
+
+.total-label {
+    font-weight: 600;
+    color: #374151;
+}
+
+.total-value {
+    font-weight: 700;
+    color: #10b981;
+    font-size: 1.25rem;
+}
+
+/* Smart Affordability Indicator */
+.affordability-indicator {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+}
+
+.affordability-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: #10b981;
+    font-weight: 600;
+}
+
+.affordability-header i {
+    margin-right: 0.5rem;
+}
+
+.affordability-meter {
+    display: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.meter-bar {
+    height: 8px;
+    background: #e5e7eb;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.meter-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ef4444, #f59e0b, #10b981);
+    border-radius: 4px;
+    width: 60%;
+    transition: width 0.5s ease;
+}
+
+.meter-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.affordability-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem;
+    background: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    border-radius: 8px;
+    color: #065f46;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+}
+
+.affordability-status i {
+    margin-right: 0.5rem;
+}
+
+.affordability-tip {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem;
+    background: #fffbeb;
+    border: 1px solid #fcd34d;
+    border-radius: 8px;
+    color: #92400e;
+    font-size: 0.875rem;
+}
+
+.affordability-tip i {
+    margin-right: 0.5rem;
+    color: #f59e0b;
+}
+
+/* CTA Button */
+.eligibility-cta {
+    width: 100%;
+    background: #10b981;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 1.25rem 2rem;
+    font-weight: 600;
+    font-size: 1.125rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.eligibility-cta:hover {
+    background: #059669;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+}
+
+/* What-If Scenarios */
+.scenarios-section {
+    margin-top: 2rem;
+}
+
+.scenario-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.scenario-card:hover {
+    border-color: #10b981;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.scenario-icon {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, #10b981, #059669);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.scenario-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+.scenario-description {
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.scenario-result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    background: #f8fafc;
+    border-radius: 8px;
+}
+
+.scenario-label {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.scenario-value {
+    font-weight: 600;
+    color: #10b981;
+    font-size: 0.875rem;
+}
+
+.scenario-cta {
+    width: 100%;
+    background: transparent;
+    color: #10b981;
+    border: 1px solid #10b981;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.scenario-cta:hover {
+    background: #10b981;
+    color: white;
+}
+
+/* Animation Classes */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .card-body {
+        padding: 1.5rem;
+    }
+    
+    .calculator-header {
+        padding: 1.5rem;
+    }
+    
+    .calculator-body {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .requirements-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .card-header {
+        padding: 1.25rem 1.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .card-icon {
+        margin-bottom: 1rem;
+    }
+    
+    .document-context {
+        margin-top: 1rem;
+        align-self: stretch;
+    }
+    
+    .costs-calculator {
+        position: static;
+    }
+}
+
+@media (max-width: 640px) {
+    .document-item {
+        padding: 0.75rem;
+    }
+    
+    .cost-item {
+        padding: 0.75rem;
+    }
+    
+    .affordability-indicator {
+        padding: 1rem;
+    }
+    
+    .quick-stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Utility Classes */
+.text-success {
+    color: #059669;
+}
+
+.text-warning {
+    color: #d97706;
+}
+
+.text-danger {
+    color: #dc2626;
+}
+
+.bg-success {
+    background: #ecfdf5;
+    border-color: #a7f3d0;
+}
+
+.bg-warning {
+    background: #fffbeb;
+    border-color: #fcd34d;
+}
+
+.bg-danger {
+    background: #fef2f2;
+    border-color: #fca5a5;
+}

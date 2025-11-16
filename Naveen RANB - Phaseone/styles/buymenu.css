@@ -1,0 +1,108 @@
+/* Foundation Styles with Green Theme */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Custom Animations */
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-up {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(-10px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.animate-fade-in {
+    animation: fade-in 1s ease-out;
+}
+
+.animate-slide-up {
+    animation: slide-up 0.8s ease-out;
+}
+
+.delay-300 {
+    animation-delay: 0.3s;
+}
+
+/* Enhanced Mega Menu Animations */
+.mega-menu-item {
+    animation: slideInRight 0.3s ease-out forwards;
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+.mega-menu-item:nth-child(1) { animation-delay: 0.1s; }
+.mega-menu-item:nth-child(2) { animation-delay: 0.2s; }
+.mega-menu-item:nth-child(3) { animation-delay: 0.3s; }
+
+#properties-mega-menu:hover .mega-menu-item {
+    animation: slideInRight 0.5s ease-out forwards;
+}
+
+/* Smooth backdrop transition */
+.mega-menu-backdrop {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Mobile menu adaptations */
+@media (max-width: 768px) {
+    #properties-mega-menu .absolute {
+        position: fixed;
+        top: 80px;
+        left: 20px;
+        right: 20px;
+        width: auto;
+    }
+}
+
+/* Enhanced hover effects */
+.mega-menu-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* Loading Animation */
+.loading-dots {
+    display: inline-block;
+}
+
+.loading-dots:after {
+    content: '...';
+    animation: dots 1.5s steps(4, end) infinite;
+}
+
+@keyframes dots {
+    0%, 20% { color: rgba(0,0,0,0); text-shadow: .25em 0 0 rgba(0,0,0,0), .5em 0 0 rgba(0,0,0,0); }
+    40% { color: white; text-shadow: .25em 0 0 rgba(0,0,0,0), .5em 0 0 rgba(0,0,0,0); }
+    60% { text-shadow: .25em 0 0 white, .5em 0 0 rgba(0,0,0,0); }
+    80%, 100% { text-shadow: .25em 0 0 white, .5em 0 0 white; }
+}

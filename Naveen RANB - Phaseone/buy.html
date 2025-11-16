@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Properties | NordicEstates - Find Your Dutch Dream Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./styles/buymenu.css">
+    <link rel="stylesheet" href="./styles/propertyfilter.css">
+    <link rel="stylesheet" href="./styles/timeline.css">
+    <link rel="stylesheet" href="./styles/neighborhood.css">
+    <link rel="stylesheet" href="./styles/mortgagecalculator.css">
+    <link rel="stylesheet" href="./js/workwithus.js">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'emerald': {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            200: '#a7f3d0',
+                            300: '#6ee7b7',
+                            400: '#34d399',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            800: '#065f46',
+                            900: '#064e3b',
+                        }
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/custom.css">
+</head>
+<body class="font-inter bg-slate-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm transition-all duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-emerald-600 rounded-lg"></div>
+                    <span class="text-2xl font-semibold text-gray-800">NordicEstates</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8 relative">
+                    <a href="index.html" class="text-gray-600 hover:text-emerald-600 transition-colors duration-300">Home</a>
+                    
+                    <!-- Properties Mega Menu -->
+                    <div class="relative group" id="properties-mega-menu">
+                        <button class="text-gray-600 hover:text-emerald-600 transition-colors duration-300 flex items-center">
+                            Properties
+                            <i class="fas fa-chevron-down ml-1 text-xs transition-transform duration-300 group-hover:rotate-180"></i>
+                        </button>
+                        
+                        <div class="absolute top-full left-0 w-96 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-100 mt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                            <div class="p-6">
+                                <div class="grid grid-cols-1 gap-4">
+                                    <a href="buy.html" class="mega-menu-item group flex items-start space-x-4 p-4 rounded-xl hover:bg-slate-50 transition-all duration-300 border border-transparent hover:border-emerald-100">
+                                        <div class="flex-shrink-0 w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center group-hover:bg-emerald-200 transition-colors duration-300">
+                                            <i class="fas fa-home text-emerald-600 text-lg"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <h3 class="font-semibold text-gray-800 group-hover:text-emerald-700 transition-colors duration-300">Buy</h3>
+                                            <p class="text-sm text-gray-600 mt-1">Find your dream home in prime Dutch locations</p>
+                                            <div class="flex items-center mt-2 text-xs text-emerald-600">
+                                                <span>2,345 properties available</span>
+                                                <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    
+                                    <a href="sell.html" class="mega-menu-item group flex items-start space-x-4 p-4 rounded-xl hover:bg-slate-50 transition-all duration-300 border border-transparent hover:border-emerald-100">
+                                        <div class="flex-shrink-0 w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center group-hover:bg-emerald-200 transition-colors duration-300">
+                                            <i class="fas fa-euro-sign text-emerald-600 text-lg"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <h3 class="font-semibold text-gray-800 group-hover:text-emerald-700 transition-colors duration-300">Sell</h3>
+                                            <p class="text-sm text-gray-600 mt-1">Get maximum value for your property, minimally stressed</p>
+                                            <div class="flex items-center mt-2 text-xs text-emerald-600">
+                                                <span>Free valuation in 24h</span>
+                                                <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    
+                                    <a href="rent.html" class="mega-menu-item group flex items-start space-x-4 p-4 rounded-xl hover:bg-slate-50 transition-all duration-300 border border-transparent hover:border-emerald-100">
+                                        <div class="flex-shrink-0 w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center group-hover:bg-emerald-200 transition-colors duration-300">
+                                            <i class="fas fa-key text-emerald-600 text-lg"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <h3 class="font-semibold text-gray-800 group-hover:text-emerald-700 transition-colors duration-300">Rent</h3>
+                                            <p class="text-sm text-gray-600 mt-1">Discover perfect rentals, from studios to family homes</p>
+                                            <div class="flex items-center mt-2 text-xs text-emerald-600">
+                                                <span>123 homes available now</span>
+                                                <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="text-gray-600 hover:text-emerald-600 transition-colors duration-300">About</a>
+                    <a href="#" class="text-gray-600 hover:text-emerald-600 transition-colors duration-300">Contact</a>
+                </div>
+                
+                <button class="bg-emerald-600 text-white px-6 py-2 rounded-lg hover:bg-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                    Get Started
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-gradient-to-br from-slate-50 to-emerald-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-6xl font-light text-gray-800 mb-6 animate-fade-in">
+                    Find Your <span class="font-semibold text-emerald-600">Dutch Dream Home</span>
+                </h1>
+                <p class="text-xl text-gray-600 mb-8 animate-slide-up">
+                    Discover premium properties across Amsterdam, Rotterdam, Utrecht & beyond with Scandinavian simplicity
+                </p>
+                <div class="animate-slide-up delay-300">
+                    <button class="bg-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl mr-4">
+                        Explore Properties
+                    </button>
+                    <button class="border-2 border-emerald-600 text-emerald-600 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-600 hover:text-white transition-all duration-300 transform hover:scale-105">
+                        <i class="fas fa-play mr-2"></i>
+                        Watch Tour
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Sections Will Go Here -->
+    <!-- Property Search & Filters -->
+         <!-- Property Search & Filters Section -->
+    <section class="py-16 bg-white" id="property-search">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Vertical Sidebar Filters -->
+                <div class="lg:w-1/4">
+                    <div class="bg-slate-50 rounded-2xl p-6 shadow-lg sticky top-32">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-6 flex items-center">
+                            <i class="fas fa-filter text-emerald-600 mr-3"></i>
+                            Filter Properties
+                        </h3>
+                        
+                        <!-- Location Filter -->
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-gray-700 mb-4 flex items-center justify-between">
+                                <span>Location</span>
+                                <i class="fas fa-map-marker-alt text-emerald-600"></i>
+                            </h4>
+                            <div class="space-y-2 location-filters">
+                                <button class="location-filter-btn w-full text-left px-4 py-3 rounded-xl bg-emerald-600 text-white transition-all duration-300 transform hover:scale-105 shadow-lg" data-location="all">
+                                    <i class="fas fa-globe-europe mr-3"></i>
+                                    All Locations
+                                    <span class="float-right text-sm bg-emerald-500 px-2 py-1 rounded-full">24</span>
+                                </button>
+                                <button class="location-filter-btn w-full text-left px-4 py-3 rounded-xl bg-white text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-all duration-300 border border-gray-200 hover:border-emerald-200" data-location="amsterdam">
+                                    <i class="fas fa-water mr-3 text-blue-500"></i>
+                                    Amsterdam
+                                    <span class="float-right text-sm bg-slate-100 px-2 py-1 rounded-full">12</span>
+                                </button>
+                                <button class="location-filter-btn w-full text-left px-4 py-3 rounded-xl bg-white text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-all duration-300 border border-gray-200 hover:border-emerald-200" data-location="rotterdam">
+                                    <i class="fas fa-building mr-3 text-gray-500"></i>
+                                    Rotterdam
+                                    <span class="float-right text-sm bg-slate-100 px-2 py-1 rounded-full">6</span>
+                                </button>
+                                <button class="location-filter-btn w-full text-left px-4 py-3 rounded-xl bg-white text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-all duration-300 border border-gray-200 hover:border-emerald-200" data-location="the-hague">
+                                    <i class="fas fa-landmark mr-3 text-purple-500"></i>
+                                    The Hague
+                                    <span class="float-right text-sm bg-slate-100 px-2 py-1 rounded-full">4</span>
+                                </button>
+                                <button class="location-filter-btn w-full text-left px-4 py-3 rounded-xl bg-white text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-all duration-300 border border-gray-200 hover:border-emerald-200" data-location="utrecht">
+                                    <i class="fas fa-church mr-3 text-orange-500"></i>
+                                    Utrecht
+                                    <span class="float-right text-sm bg-slate-100 px-2 py-1 rounded-full">2</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Price Range -->
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-gray-700 mb-4">Price Range (€)</h4>
+                            <div class="space-y-4">
+                                <div class="flex space-x-4">
+                                    <div class="flex-1">
+                                        <label class="text-sm text-gray-600 mb-1 block">Min Price</label>
+                                        <select class="price-min-filter w-full bg-white border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                                            <option value="0">Any</option>
+                                            <option value="200000">€200,000</option>
+                                            <option value="300000">€300,000</option>
+                                            <option value="400000">€400,000</option>
+                                            <option value="500000">€500,000</option>
+                                            <option value="750000">€750,000</option>
+                                        </select>
+                                    </div>
+                                    <div class="flex-1">
+                                        <label class="text-sm text-gray-600 mb-1 block">Max Price</label>
+                                        <select class="price-max-filter w-full bg-white border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                                            <option value="999999999">Any</option>
+                                            <option value="500000">€500,000</option>
+                                            <option value="750000">€750,000</option>
+                                            <option value="1000000">€1,000,000</option>
+                                            <option value="1500000">€1,500,000</option>
+                                            <option value="2000000">€2,000,000</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Property Type -->
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-gray-700 mb-4">Property Type</h4>
+                            <div class="grid grid-cols-2 gap-2">
+                                <button class="property-type-filter-btn px-3 py-2 rounded-lg bg-emerald-600 text-white text-sm transition-all duration-300 hover:scale-105" data-type="all">
+                                    All Types
+                                </button>
+                                <button class="property-type-filter-btn px-3 py-2 rounded-lg bg-white border border-gray-200 text-gray-700 text-sm transition-all duration-300 hover:bg-emerald-50 hover:scale-105" data-type="apartment">
+                                    Apartment
+                                </button>
+                                <button class="property-type-filter-btn px-3 py-2 rounded-lg bg-white border border-gray-200 text-gray-700 text-sm transition-all duration-300 hover:bg-emerald-50 hover:scale-105" data-type="house">
+                                    House
+                                </button>
+                                <button class="property-type-filter-btn px-3 py-2 rounded-lg bg-white border border-gray-200 text-gray-700 text-sm transition-all duration-300 hover:bg-emerald-50 hover:scale-105" data-type="villa">
+                                    Villa
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Bedrooms -->
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-gray-700 mb-4">Bedrooms</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <button class="bedroom-filter-btn px-3 py-2 rounded-lg bg-emerald-600 text-white text-sm transition-all duration-300 hover:scale-105" data-bedrooms="all">
+                                    Any
+                                </button>
+                                <button class="bedroom-filter-btn px-3 py-2 rounded-lg bg-white border border-gray-200 text-gray-700 text-sm transition-all duration-300 hover:bg-emerald-50 hover:scale-105" data-bedrooms="1">
+                                    1+
+                                </button>
+                                <button class="bedroom-filter-btn px-3 py-2 rounded-lg bg-white border border-gray-200 text-gray-700 text-sm transition-all duration-300 hover:bg-emerald-50 hover:scale-105" data-bedrooms="2">
+                                    2+
+                                </button>
+                                <button class="bedroom-filter-btn px-3 py-2 rounded-lg bg-white border border-gray-200 text-gray-700 text-sm transition-all duration-300 hover:bg-emerald-50 hover:scale-105" data-bedrooms="3">
+                                    3+
+                                </button>
+                                <button class="bedroom-filter-btn px-3 py-2 rounded-lg bg-white border border-gray-200 text-gray-700 text-sm transition-all duration-300 hover:bg-emerald-50 hover:scale-105" data-bedrooms="4">
+                                    4+
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Additional Features -->
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-gray-700 mb-4">Features</h4>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 text-sm text-gray-700">
+                                    <input type="checkbox" class="feature-filter rounded text-emerald-600 focus:ring-emerald-500" data-feature="garden">
+                                    <span>Garden</span>
+                                </label>
+                                <label class="flex items-center space-x-3 text-sm text-gray-700">
+                                    <input type="checkbox" class="feature-filter rounded text-emerald-600 focus:ring-emerald-500" data-feature="parking">
+                                    <span>Parking</span>
+                                </label>
+                                <label class="flex items-center space-x-3 text-sm text-gray-700">
+                                    <input type="checkbox" class="feature-filter rounded text-emerald-600 focus:ring-emerald-500" data-feature="balcony">
+                                    <span>Balcony</span>
+                                </label>
+                                <label class="flex items-center space-x-3 text-sm text-gray-700">
+                                    <input type="checkbox" class="feature-filter rounded text-emerald-600 focus:ring-emerald-500" data-feature="furnished">
+                                    <span>Furnished</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <button class="w-full bg-emerald-600 text-white py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg apply-filters-btn">
+                            <i class="fas fa-search mr-2"></i>
+                            Apply Filters
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Property Results -->
+                <div class="lg:w-3/4">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
+                        <div>
+                            <h2 class="text-3xl font-semibold text-gray-800 properties-count">24 Properties Found</h2>
+                            <p class="text-gray-600 location-display">Showing properties in all locations</p>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <select class="sort-select bg-white border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                                <option value="newest">Sort by: Newest</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="size-large">Size: Large to Small</option>
+                            </select>
+                            <div class="flex items-center space-x-2">
+                                <button class="view-toggle-btn bg-white border border-gray-300 rounded-lg p-2 hover:bg-slate-50 transition-colors duration-300 active" data-view="grid">
+                                    <i class="fas fa-th"></i>
+                                </button>
+                                <button class="view-toggle-btn bg-white border border-gray-300 rounded-lg p-2 hover:bg-slate-50 transition-colors duration-300" data-view="list">
+                                    <i class="fas fa-list"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Property Grid -->
+                    <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6 property-grid view-grid" id="property-results">
+                        <!-- Properties will be dynamically loaded here -->
+                    </div>
+
+                    <!-- No Results Message -->
+                    <div class="hidden text-center py-12 no-results-message">
+                        <i class="fas fa-search text-gray-300 text-6xl mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-600 mb-2">No properties found</h3>
+                        <p class="text-gray-500 mb-6">Try adjusting your filters to see more results</p>
+                        <button class="clear-all-filters-btn bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors duration-300">
+                            Clear All Filters
+                        </button>
+                    </div>
+
+                    <!-- Load More Button -->
+                    <div class="text-center mt-12 load-more-container">
+                        <button class="load-more-btn bg-white border border-emerald-600 text-emerald-600 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-600 hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg">
+                            <i class="fas fa-plus mr-2"></i>
+                            Load More Properties
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Buying Process Timeline -->
+         <!-- Buying Process Timeline Section -->
+    <section class="py-20 bg-slate-50" id="buying-process">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-light text-gray-800 mb-4">Dutch Buying Process Made Simple</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">Our expert guidance through every step of purchasing your Dutch dream home</p>
+            </div>
+
+            <!-- Timeline -->
+            <div class="relative">
+                <!-- Timeline Line -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-1 bg-emerald-200 h-full hidden lg:block timeline-line"></div>
+                
+                <div class="space-y-12 lg:space-y-0 buying-process-timeline">
+                    <!-- Step 1 -->
+                    <div class="timeline-step group relative flex flex-col lg:flex-row items-center lg:items-start">
+                        <div class="flex-shrink-0 lg:w-1/2 lg:pr-12 lg:text-right mb-6 lg:mb-0 order-2 lg:order-1">
+                            <div class="lg:inline-block lg:text-right">
+                                <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-4 mx-auto lg:mx-0 lg:ml-auto group-hover:bg-emerald-200 transition-colors duration-300">
+                                    <i class="fas fa-search text-emerald-600 text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2">Property Search & Viewing</h3>
+                                <p class="text-gray-600 mb-3">Find your ideal property and schedule viewings with our expert agents</p>
+                                <div class="flex items-center justify-center lg:justify-end text-emerald-600 text-sm font-semibold">
+                                    <i class="fas fa-clock mr-2"></i>
+                                    1-4 weeks
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex-shrink-0 order-1 lg:order-2 mb-4 lg:mb-0">
+                            <div class="step-indicator w-16 h-16 bg-emerald-600 rounded-full flex items-center justify-center text-white text-xl font-semibold mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg timeline-dot">
+                                1
+                            </div>
+                        </div>
+                        
+                        <div class="flex-shrink-0 lg:w-1/2 lg:pl-12 order-3 lg:block hidden">
+                            <!-- Spacer for desktop alignment -->
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="timeline-step group relative flex flex-col lg:flex-row items-center lg:items-start">
+                        <div class="flex-shrink-0 lg:w-1/2 lg:pr-12 order-3 lg:block hidden">
+                            <!-- Spacer for desktop alignment -->
+                        </div>
+                        
+                        <div class="flex-shrink-0 order-1 lg:order-2 mb-4 lg:mb-0">
+                            <div class="step-indicator w-16 h-16 bg-emerald-600 rounded-full flex items-center justify-center text-white text-xl font-semibold mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg timeline-dot">
+                                2
+                            </div>
+                        </div>
+                        
+                        <div class="flex-shrink-0 lg:w-1/2 lg:pl-12 mb-6 lg:mb-0 order-2 lg:order-3">
+                            <div class="lg:inline-block">
+                                <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-4 mx-auto lg:mx-0 group-hover:bg-emerald-200 transition-colors duration-300">
+                                    <i class="fas fa-handshake text-emerald-600 text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2">Make Offer & Negotiation</h3>
+                                <p class="text-gray-600 mb-3">Strategic offer preparation and expert negotiation for the best price</p>
+                                <div class="flex items-center justify-center lg:justify-start text-emerald-600 text-sm font-semibold">
+                                    <i class="fas fa-clock mr-2"></i>
+                                    1-2 weeks
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="timeline-step group relative flex flex-col lg:flex-row items-center lg:items-start">
+                        <div class="flex-shrink-0 lg:w-1/2 lg:pr-12 lg:text-right mb-6 lg:mb-0 order-2 lg:order-1">
+                            <div class="lg:inline-block lg:text-right">
+                                <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-4 mx-auto lg:mx-0 lg:ml-auto group-hover:bg-emerald-200 transition-colors duration-300">
+                                    <i class="fas fa-clipboard-check text-emerald-600 text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2">Technical Inspection</h3>
+                                <p class="text-gray-600 mb-3">Professional building inspection to ensure property quality and value</p>
+                                <div class="flex items-center justify-center lg:justify-end text-emerald-600 text-sm font-semibold">
+                                    <i class="fas fa-clock mr-2"></i>
+                                    2-3 weeks
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex-shrink-0 order-1 lg:order-2 mb-4 lg:mb-0">
+                            <div class="step-indicator w-16 h-16 bg-emerald-600 rounded-full flex items-center justify-center text-white text-xl font-semibold mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg timeline-dot">
+                                3
+                            </div>
+                        </div>
+                        
+                        <div class="flex-shrink-0 lg:w-1/2 lg:pl-12 order-3 lg:block hidden">
+                            <!-- Spacer for desktop alignment -->
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="timeline-step group relative flex flex-col lg:flex-row items-center lg:items-start">
+                        <div class="flex-shrink-0 lg:w-1/2 lg:pr-12 order-3 lg:block hidden">
+                            <!-- Spacer for desktop alignment -->
+                        </div>
+                        
+                        <div class="flex-shrink-0 order-1 lg:order-2 mb-4 lg:mb-0">
+                            <div class="step-indicator w-16 h-16 bg-emerald-600 rounded-full flex items-center justify-center text-white text-xl font-semibold mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg timeline-dot">
+                                4
+                            </div>
+                        </div>
+                        
+                        <div class="flex-shrink-0 lg:w-1/2 lg:pl-12 mb-6 lg:mb-0 order-2 lg:order-3">
+                            <div class="lg:inline-block">
+                                <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-4 mx-auto lg:mx-0 group-hover:bg-emerald-200 transition-colors duration-300">
+                                    <i class="fas fa-file-contract text-emerald-600 text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2">Mortgage Arrangement</h3>
+                                <p class="text-gray-600 mb-3">Secure the best mortgage rates with our network of financial advisors</p>
+                                <div class="flex items-center justify-center lg:justify-start text-emerald-600 text-sm font-semibold">
+                                    <i class="fas fa-clock mr-2"></i>
+                                    4-6 weeks
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="timeline-step group relative flex flex-col lg:flex-row items-center lg:items-start">
+                        <div class="flex-shrink-0 lg:w-1/2 lg:pr-12 lg:text-right mb-6 lg:mb-0 order-2 lg:order-1">
+                            <div class="lg:inline-block lg:text-right">
+                                <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-4 mx-auto lg:mx-0 lg:ml-auto group-hover:bg-emerald-200 transition-colors duration-300">
+                                    <i class="fas fa-balance-scale text-emerald-600 text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2">Notary Transfer</h3>
+                                <p class="text-gray-600 mb-3">Official property transfer at the notary with 10% deposit payment</p>
+                                <div class="flex items-center justify-center lg:justify-end text-emerald-600 text-sm font-semibold">
+                                    <i class="fas fa-clock mr-2"></i>
+                                    6-8 weeks
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex-shrink-0 order-1 lg:order-2 mb-4 lg:mb-0">
+                            <div class="step-indicator w-16 h-16 bg-emerald-600 rounded-full flex items-center justify-center text-white text-xl font-semibold mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg timeline-dot">
+                                5
+                            </div>
+                        </div>
+                        
+                        <div class="flex-shrink-0 lg:w-1/2 lg:pl-12 order-3 lg:block hidden">
+                            <!-- Spacer for desktop alignment -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="text-center mt-16">
+                <button class="download-guide-btn bg-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                    <i class="fas fa-download mr-2"></i>
+                    Download Complete Buying Guide
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Featured Neighborhoods -->
+         <!-- Featured Neighborhoods Section -->
+    <section class="py-20 bg-white" id="featured-neighborhoods">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-light text-gray-800 mb-4">Featured Dutch Neighborhoods</h2>
+                <p class="text-gray-600 text-lg">Discover the most sought-after locations across the Netherlands</p>
+            </div>
+
+            <!-- Neighborhood Carousel -->
+            <div class="relative">
+                <div class="neighborhood-carousel flex space-x-6 overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-hide" id="neighborhood-carousel">
+                    <!-- Neighborhood cards will be dynamically loaded -->
+                </div>
+                
+                <!-- Navigation Buttons -->
+                <button class="neighborhood-prev absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 bg-white rounded-full w-12 h-12 shadow-lg flex items-center justify-center text-gray-600 hover:text-emerald-600 transition-all duration-300 hover:scale-110 z-10 border border-gray-200">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="neighborhood-next absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 bg-white rounded-full w-12 h-12 shadow-lg flex items-center justify-center text-gray-600 hover:text-emerald-600 transition-all duration-300 hover:scale-110 z-10 border border-gray-200">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+                <!-- Carousel Indicators -->
+                <div class="flex justify-center space-x-2 mt-8 carousel-indicators">
+                    <!-- Indicators will be dynamically generated -->
+                </div>
+            </div>
+
+            <!-- Neighborhood Stats -->
+            <div class="mt-16 grid md:grid-cols-4 gap-8 text-center">
+                <div class="neighborhood-stat group">
+                    <div class="text-3xl font-bold text-emerald-600 mb-2 group-hover:scale-110 transition-transform duration-300">98%</div>
+                    <div class="text-gray-600">Client Satisfaction</div>
+                </div>
+                <div class="neighborhood-stat group">
+                    <div class="text-3xl font-bold text-emerald-600 mb-2 group-hover:scale-110 transition-transform duration-300">2,345+</div>
+                    <div class="text-gray-600">Properties Listed</div>
+                </div>
+                <div class="neighborhood-stat group">
+                    <div class="text-3xl font-bold text-emerald-600 mb-2 group-hover:scale-110 transition-transform duration-300">15</div>
+                    <div class="text-gray-600">Neighborhoods</div>
+                </div>
+                <div class="neighborhood-stat group">
+                    <div class="text-3xl font-bold text-emerald-600 mb-2 group-hover:scale-110 transition-transform duration-300">24/7</div>
+                    <div class="text-gray-600">Support</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Mortgage Calculator -->
+    <!-- Mortgage Calculator Section -->
+    <section class="py-20 bg-gradient-to-br from-emerald-50 to-blue-50 relative overflow-hidden" id="mortgage-calculator">
+        <!-- Background House Image -->
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.1&auto=format&fit=crop&w=2850&q=80')] bg-cover bg-center opacity-10"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-light text-gray-800 mb-4">Dutch Mortgage Calculator</h2>
+                <p class="text-gray-600 text-lg">Calculate your monthly payments with Dutch-specific mortgage rules</p>
+            </div>
+
+            <div class="max-w-6xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <!-- Calculator Inputs -->
+                    <div class="bg-white/80 backdrop-blur-sm rounded-3xl shadow-2xl p-8 border border-white/20">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-6 flex items-center">
+                            <i class="fas fa-calculator text-emerald-600 mr-3"></i>
+                            Calculate Your Mortgage
+                        </h3>
+                        
+                        <div class="space-y-6">
+                            <!-- Property Price -->
+                            <div class="calculator-input-group">
+                                <label class="block text-sm font-semibold text-gray-700 mb-3">
+                                    <i class="fas fa-home mr-2 text-emerald-600"></i>
+                                    Property Price (€)
+                                </label>
+                                <input type="range" min="150000" max="2500000" value="850000" 
+                                       class="calculator-slider w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer" 
+                                       id="property-price-slider">
+                                <div class="flex justify-between items-center mt-2">
+                                    <span class="text-sm text-gray-600">€150,000</span>
+                                    <div class="text-lg font-bold text-emerald-600" id="property-price-value">€850,000</div>
+                                    <span class="text-sm text-gray-600">€2,500,000</span>
+                                </div>
+                            </div>
+
+                            <!-- Down Payment -->
+                            <div class="calculator-input-group">
+                                <label class="block text-sm font-semibold text-gray-700 mb-3">
+                                    <i class="fas fa-euro-sign mr-2 text-emerald-600"></i>
+                                    Down Payment (€)
+                                </label>
+                                <input type="range" min="0" max="500000" value="150000" 
+                                       class="calculator-slider w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer" 
+                                       id="down-payment-slider">
+                                <div class="flex justify-between items-center mt-2">
+                                    <span class="text-sm text-gray-600">€0</span>
+                                    <div class="text-lg font-bold text-emerald-600" id="down-payment-value">€150,000</div>
+                                    <span class="text-sm text-gray-600">€500,000</span>
+                                </div>
+                                <div class="text-xs text-gray-500 mt-1" id="down-payment-percentage">17.6% of property price</div>
+                            </div>
+
+                            <!-- Interest Rate -->
+                            <div class="calculator-input-group">
+                                <label class="block text-sm font-semibold text-gray-700 mb-3">
+                                    <i class="fas fa-percentage mr-2 text-emerald-600"></i>
+                                    Interest Rate (%)
+                                </label>
+                                <input type="range" min="1" max="6" step="0.1" value="3.8" 
+                                       class="calculator-slider w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer" 
+                                       id="interest-rate-slider">
+                                <div class="flex justify-between items-center mt-2">
+                                    <span class="text-sm text-gray-600">1%</span>
+                                    <div class="text-lg font-bold text-emerald-600" id="interest-rate-value">3.8%</div>
+                                    <span class="text-sm text-gray-600">6%</span>
+                                </div>
+                            </div>
+
+                            <!-- Loan Term -->
+                            <div class="calculator-input-group">
+                                <label class="block text-sm font-semibold text-gray-700 mb-3">
+                                    <i class="fas fa-calendar-alt mr-2 text-emerald-600"></i>
+                                    Loan Term (Years)
+                                </label>
+                                <div class="grid grid-cols-4 gap-2">
+                                    <button class="loan-term-btn bg-emerald-600 text-white py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 active" data-years="30">30</button>
+                                    <button class="loan-term-btn bg-white border border-gray-300 text-gray-700 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:border-emerald-300" data-years="25">25</button>
+                                    <button class="loan-term-btn bg-white border border-gray-300 text-gray-700 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:border-emerald-300" data-years="20">20</button>
+                                    <button class="loan-term-btn bg-white border border-gray-300 text-gray-700 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:border-emerald-300" data-years="15">15</button>
+                                </div>
+                            </div>
+
+                            <!-- Dutch Specific Options -->
+                            <div class="calculator-input-group">
+                                <label class="block text-sm font-semibold text-gray-700 mb-3">
+                                    <i class="fas fa-shield-alt mr-2 text-emerald-600"></i>
+                                    Dutch Mortgage Features
+                                </label>
+                                <div class="space-y-3">
+                                    <label class="flex items-center space-x-3 text-sm text-gray-700">
+                                        <input type="checkbox" class="mortgage-feature rounded text-emerald-600 focus:ring-emerald-500" id="nhg-toggle" checked>
+                                        <span>Include NHG (National Mortgage Guarantee) <span class="text-emerald-600 font-semibold">-0.6% interest</span></span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 text-sm text-gray-700">
+                                        <input type="checkbox" class="mortgage-feature rounded text-emerald-600 focus:ring-emerald-500" id="annuity-toggle" checked>
+                                        <span>Annuity Mortgage (Most common in Netherlands)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 text-sm text-gray-700">
+                                        <input type="checkbox" class="mortgage-feature rounded text-emerald-600 focus:ring-emerald-500" id="transfer-tax-toggle">
+                                        <span>Include Transfer Tax (2% for investors)</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Reset & Calculate Buttons -->
+                            <div class="flex space-x-4 pt-4">
+                                <button class="flex-1 bg-gray-600 text-white py-3 rounded-lg font-semibold hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg reset-calculator-btn">
+                                    <i class="fas fa-redo mr-2"></i>
+                                    Reset
+                                </button>
+                                <button class="flex-1 bg-emerald-600 text-white py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg calculate-mortgage-btn">
+                                    <i class="fas fa-calculator mr-2"></i>
+                                    Calculate
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Calculator Results -->
+                    <div class="space-y-6">
+                        <!-- Main Result Card -->
+                        <div class="bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-3xl p-8 text-white shadow-2xl">
+                            <h3 class="text-xl font-semibold mb-6 text-center">Your Monthly Payment</h3>
+                            <div class="text-center mb-6">
+                                <div class="text-5xl font-bold mb-2" id="monthly-payment">€3,247</div>
+                                <div class="text-emerald-100 text-lg">per month</div>
+                            </div>
+                            
+                            <div class="grid grid-cols-2 gap-4 text-sm mb-6">
+                                <div class="text-center p-3 bg-emerald-400/20 rounded-lg">
+                                    <div class="text-emerald-100">Mortgage Amount</div>
+                                    <div class="font-semibold text-lg" id="mortgage-amount">€700,000</div>
+                                </div>
+                                <div class="text-center p-3 bg-emerald-400/20 rounded-lg">
+                                    <div class="text-emerald-100">Total Interest</div>
+                                    <div class="font-semibold text-lg" id="total-interest">€468,920</div>
+                                </div>
+                            </div>
+
+                            <div class="space-y-3 text-sm">
+                                <div class="flex justify-between items-center py-2 border-b border-emerald-400/30">
+                                    <span>Total Payment:</span>
+                                    <span class="font-semibold" id="total-payment">€1,168,920</span>
+                                </div>
+                                <div class="flex justify-between items-center py-2 border-b border-emerald-400/30">
+                                    <span>NHG Benefit:</span>
+                                    <span class="font-semibold text-emerald-200" id="nhg-benefit">-€187/m</span>
+                                </div>
+                                <div class="flex justify-between items-center py-2 border-b border-emerald-400/30">
+                                    <span>Transfer Tax (2%):</span>
+                                    <span class="font-semibold" id="transfer-tax">€17,000</span>
+                                </div>
+                                <div class="flex justify-between items-center py-2">
+                                    <span>Notary Costs:</span>
+                                    <span class="font-semibold" id="notary-costs">€2,500</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Additional Info Cards -->
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <!-- Interest Breakdown -->
+                            <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+                                <h4 class="font-semibold text-gray-800 mb-3 flex items-center">
+                                    <i class="fas fa-chart-pie text-emerald-600 mr-2"></i>
+                                    Payment Breakdown
+                                </h4>
+                                <div class="space-y-2 text-sm">
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">Principal:</span>
+                                        <span class="font-semibold" id="principal-payment">€1,944</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">Interest:</span>
+                                        <span class="font-semibold" id="interest-payment">€1,303</span>
+                                    </div>
+                                    <div class="flex justify-between text-xs text-gray-500">
+                                        <span>First 5 years interest:</span>
+                                        <span id="first-years-interest">€78,180</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Affordability Check -->
+                            <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+                                <h4 class="font-semibold text-gray-800 mb-3 flex items-center">
+                                    <i class="fas fa-check-circle text-emerald-600 mr-2"></i>
+                                    Affordability Check
+                                </h4>
+                                <div class="space-y-2 text-sm">
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-gray-600">Income Multiple:</span>
+                                        <span class="font-semibold text-emerald-600" id="income-multiple">4.5x</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">Required Income:</span>
+                                        <span class="font-semibold" id="required-income">€86,592/yr</span>
+                                    </div>
+                                    <div class="text-xs text-emerald-600 font-semibold mt-2" id="affordability-status">
+                                        ✅ Within Dutch norms
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Amortization Chart -->
+                        <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+                            <h4 class="font-semibold text-gray-800 mb-4 flex items-center">
+                                <i class="fas fa-chart-line text-emerald-600 mr-2"></i>
+                                5-Year Amortization
+                            </h4>
+                            <div class="space-y-3 text-sm" id="amortization-chart">
+                                <!-- Chart will be dynamically generated -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dutch Mortgage Info -->
+                <div class="mt-12 bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-lg">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Dutch Mortgage Specifics</h3>
+                    <div class="grid md:grid-cols-3 gap-6 text-sm">
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-3 mx-auto">
+                                <i class="fas fa-shield-alt text-emerald-600 text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 mb-2">NHG Guarantee</h4>
+                            <p class="text-gray-600">Properties up to €435,000 eligible for National Mortgage Guarantee with lower interest rates</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-3 mx-auto">
+                                <i class="fas fa-percentage text-blue-600 text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Tax Benefits</h4>
+                            <p class="text-gray-600">Mortgage interest tax deduction (HRA) available for existing mortgages</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-3 mx-auto">
+                                <i class="fas fa-balance-scale text-purple-600 text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Loan-to-Value</h4>
+                            <p class="text-gray-600">Maximum 100% LTV for most buyers, decreasing to 90% by 2028</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Buy Through Us -->
+         <!-- Why Buy Through Us Section -->
+    <section class="py-20 bg-slate-50" id="why-choose-us">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-light text-gray-800 mb-4">Why Buy Through NordicEstates</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">Experience the difference of working with Dutch real estate experts</p>
+            </div>
+
+            <!-- Flowchart -->
+            <div class="max-w-6xl mx-auto">
+                <div class="relative">
+                    <!-- Desktop Connection Lines -->
+                    <!-- <div class="hidden lg:block absolute inset-0 flowchart-connections"> -->
+                        <!-- Horizontal connecting lines -->
+
+                        <!-- <div class="absolute top-1/2 left-1/4 transform -translate-y-1/2 w-1/4 h-0.5 bg-emerald-200 connection-line line-1"></div>
+                        <div class="absolute top-1/2 left-1/2 transform -translate-y-1/2 w-1/4 h-0.5 bg-emerald-200 connection-line line-2"></div>
+                        <div class="absolute top-1/2 left-3/4 transform -translate-y-1/2 w-1/4 h-0.5 bg-emerald-200 connection-line line-3"></div>
+                        <div class="absolute top-1/2 left-1/4 transform -translate-y-1/2 w-1/4 h-0.5 bg-emerald-200 connection-line line-4"></div>
+                         -->
+                        <!-- Arrowheads -->
+                        <!-- <div class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1 arrowhead arrowhead-1">
+                            <i class="fas fa-arrow-right text-emerald-400 text-xl"></i>
+                        </div>
+                        <div class="absolute top-1/2 left-3/4 transform -translate-y-1/2 -translate-x-1 arrowhead arrowhead-2">
+                            <i class="fas fa-arrow-right text-emerald-400 text-xl"></i>
+                        </div>
+                        <div class="absolute top-1/2 left-full transform -translate-y-1/2 -translate-x-3 arrowhead arrowhead-3">
+                            <i class="fas fa-arrow-right text-emerald-400 text-xl"></i>
+                        </div>
+                    </div> -->
+
+                    <!-- Mobile Connection Lines (Vertical) -->
+                    <div class="lg:hidden absolute inset-0 flowchart-connections-mobile">
+                        <!-- Vertical connecting lines -->
+                        <div class="absolute left-1/2 top-1/4 transform -translate-x-1/2 w-0.5 h-1/4 bg-emerald-200 connection-line-mobile line-mobile-1"></div>
+                        <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 w-0.5 h-1/4 bg-emerald-200 connection-line-mobile line-mobile-2"></div>
+                        <div class="absolute left-1/2 top-3/4 transform -translate-x-1/2 w-0.5 h-1/4 bg-emerald-200 connection-line-mobile line-mobile-3"></div>
+                        
+                        <!-- Arrowheads (Vertical) -->
+                        <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1 arrowhead-mobile arrowhead-mobile-1">
+                            <i class="fas fa-arrow-down text-emerald-400 text-xl"></i>
+                        </div>
+                        <div class="absolute left-1/2 top-3/4 transform -translate-x-1/2 -translate-y-1 arrowhead-mobile arrowhead-mobile-2">
+                            <i class="fas fa-arrow-down text-emerald-400 text-xl"></i>
+                        </div>
+                        <div class="absolute left-1/2 top-full transform -translate-x-1/2 -translate-y-3 arrowhead-mobile arrowhead-mobile-3">
+                            <i class="fas fa-arrow-down text-emerald-400 text-xl"></i>
+                        </div>
+                    </div>
+
+                    <!-- Flowchart Steps -->
+                    <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 relative z-10 flowchart-steps">
+                        <!-- Step 1 -->
+                        <div class="flowchart-step group text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 relative">
+                            <div class="step-number absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-emerald-600 rounded-full flex items-center justify-center text-white font-semibold text-sm">
+                                1
+                            </div>
+                            <div class="w-20 h-20 bg-emerald-100 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:bg-emerald-200 transition-colors duration-300 step-icon">
+                                <i class="fas fa-user-tie text-emerald-600 text-3xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3">Expert Dutch Agents</h3>
+                            <p class="text-gray-600 text-sm mb-4 leading-relaxed">Bilingual agents with deep local market knowledge and negotiation expertise</p>
+                            <div class="flowchart-metric bg-emerald-50 text-emerald-700 px-3 py-2 rounded-lg text-sm font-semibold inline-block">
+                                <i class="fas fa-star mr-1"></i>
+                                98% client satisfaction
+                            </div>
+                            <div class="step-tooltip absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 bg-gray-800 text-white text-sm px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                                Meet our expert team
+                                <div class="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-gray-800"></div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="flowchart-step group text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 relative">
+                            <div class="step-number absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-emerald-600 rounded-full flex items-center justify-center text-white font-semibold text-sm">
+                                2
+                            </div>
+                            <div class="w-20 h-20 bg-blue-100 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:bg-blue-200 transition-colors duration-300 step-icon">
+                                <i class="fas fa-search text-blue-600 text-3xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3">Premium Property Access</h3>
+                            <p class="text-gray-600 text-sm mb-4 leading-relaxed">Exclusive access to off-market listings and prime locations across Netherlands</p>
+                            <div class="flowchart-metric bg-blue-50 text-blue-700 px-3 py-2 rounded-lg text-sm font-semibold inline-block">
+                                <i class="fas fa-home mr-1"></i>
+                                2,345+ properties
+                            </div>
+                            <div class="step-tooltip absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 bg-gray-800 text-white text-sm px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                                View exclusive listings
+                                <div class="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-gray-800"></div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="flowchart-step group text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 relative">
+                            <div class="step-number absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-emerald-600 rounded-full flex items-center justify-center text-white font-semibold text-sm">
+                                3
+                            </div>
+                            <div class="w-20 h-20 bg-purple-100 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:bg-purple-200 transition-colors duration-300 step-icon">
+                                <i class="fas fa-euro-sign text-purple-600 text-3xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3">Financial Guidance</h3>
+                            <p class="text-gray-600 text-sm mb-4 leading-relaxed">Mortgage advice, tax optimization, and financial planning with trusted partners</p>
+                            <div class="flowchart-metric bg-purple-50 text-purple-700 px-3 py-2 rounded-lg text-sm font-semibold inline-block">
+                                <i class="fas fa-percentage mr-1"></i>
+                                Best rates guaranteed
+                            </div>
+                            <div class="step-tooltip absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 bg-gray-800 text-white text-sm px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                                Get financial advice
+                                <div class="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-gray-800"></div>
+                            </div>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div class="flowchart-step group text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 relative">
+                            <div class="step-number absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-emerald-600 rounded-full flex items-center justify-center text-white font-semibold text-sm">
+                                4
+                            </div>
+                            <div class="w-20 h-20 bg-orange-100 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:bg-orange-200 transition-colors duration-300 step-icon">
+                                <i class="fas fa-shield-alt text-orange-600 text-3xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3">Stress-Free Process</h3>
+                            <p class="text-gray-600 text-sm mb-4 leading-relaxed">End-to-end support from search to key handover, including legal and technical aspects</p>
+                            <div class="flowchart-metric bg-orange-50 text-orange-700 px-3 py-2 rounded-lg text-sm font-semibold inline-block">
+                                <i class="fas fa-headset mr-1"></i>
+                                24/7 support
+                            </div>
+                            <div class="step-tooltip absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 bg-gray-800 text-white text-sm px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                                Start your journey
+                                <div class="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-gray-800"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Section -->
+                <div class="text-center mt-20">
+                    <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 max-w-2xl mx-auto">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Ready to Start Your Journey?</h3>
+                        <p class="text-gray-600 mb-6">Join thousands of satisfied homeowners who found their perfect Dutch home with us</p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <button class="schedule-consultation-btn bg-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                                <i class="fas fa-calendar mr-2"></i>
+                                Schedule Consultation
+                            </button>
+                            <button class="download-brochure-btn border-2 border-emerald-600 text-emerald-600 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-600 hover:text-white transition-all duration-300 transform hover:scale-105">
+                                <i class="fas fa-download mr-2"></i>
+                                Download Brochure
+                            </button>
+                        </div>
+                        <div class="mt-6 text-sm text-gray-500">
+                            <i class="fas fa-clock mr-2"></i>
+                            Average time to find perfect home: <span class="font-semibold text-emerald-600">6-8 weeks</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-emerald-500 rounded-lg"></div>
+                        <span class="text-2xl font-semibold">NordicEstates</span>
+                    </div>
+                    <p class="text-gray-400">Creating beautiful living spaces inspired by Scandinavian design principles.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="buy.html" class="hover:text-white transition-colors">Buy Properties</a></li>
+                        <li><a href="sell.html" class="hover:text-white transition-colors">Sell Your Property</a></li>
+                        <li><a href="rent.html" class="hover:text-white transition-colors">Rent a Home</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3"></i>
+                            <span>123 Keizersgracht, Amsterdam</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3"></i>
+                            <span>+31 20 123 4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <span>hello@nordicestates.nl</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Subscribe for latest property updates</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg text-gray-800 w-full">
+                        <button class="bg-emerald-500 px-4 py-2 rounded-r-lg hover:bg-emerald-600 transition-colors">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 NordicEstates. All rights reserved. | KVK: 12345678 | VAT: NL123456789B01</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/megamenu.js"></script>
+    <script src="js/propertyfilter.js"></script>
+    <script src="./js/timeline.js"></script>
+    <script src="./js/neighbhorhood.js"></script>
+    <script src="./js/mortgagecalculator.js"></script>
+    <script src="./js/workwithus.js"></script>
+</body>
+</html>

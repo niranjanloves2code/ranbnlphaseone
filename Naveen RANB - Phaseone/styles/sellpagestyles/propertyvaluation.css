@@ -1,0 +1,246 @@
+/* === SELL PAGE: Phase 2 Valuation Wizard Styles === */
+
+/* Valuation Wizard Container */
+.valuation-wizard {
+    position: relative;
+}
+
+/* Step Transitions */
+.valuation-step {
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: absolute;
+    width: 100%;
+}
+
+.valuation-step.active {
+    opacity: 1;
+    transform: translateX(0);
+    position: relative;
+}
+
+/* Progress Bar Animation */
+.valuation-progress-bar {
+    transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    background: linear-gradient(90deg, #10b981, #34d399, #10b981);
+    background-size: 200% 100%;
+    animation: progressGlow 2s ease-in-out infinite;
+}
+
+@keyframes progressGlow {
+    0%, 100% { background-position: 200% 0; }
+    50% { background-position: -200% 0; }
+}
+
+/* Property Type Selector */
+.property-type-btn {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.property-type-btn.active {
+    border-color: #10b981;
+    background: #ecfdf5;
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15);
+}
+
+.property-type-btn.active i {
+    color: #10b981;
+}
+
+/* Energy Label Selector */
+.energy-label-btn {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.energy-label-btn.active {
+    background: #10b981;
+    color: white;
+    border-color: #10b981;
+    transform: scale(1.05);
+}
+
+/* Neighborhood Map */
+.neighborhood-option button {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.neighborhood-option button.active {
+    border-color: #10b981;
+    background: #ecfdf5;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15);
+}
+
+/* WOZ Information Box */
+.woz-info {
+    animation: slideInUp 0.6s ease-out;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Amenity Selection */
+.amenity-option {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.amenity-option:hover {
+    border-color: #10b981;
+    background: #f0fdf4;
+}
+
+.amenity-checkbox:checked ~ span {
+    color: #10b981;
+    font-weight: 600;
+}
+
+.amenity-option:has(.amenity-checkbox:checked) {
+    border-color: #10b981;
+    background: #ecfdf5;
+}
+
+/* Condition Selector */
+.condition-btn {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.condition-btn.active {
+    border-color: #10b981;
+    background: #ecfdf5;
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15);
+}
+
+.condition-btn.active i {
+    color: #10b981;
+}
+
+/* Valuation Results */
+.valuation-result {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: countUp 1s ease-out;
+}
+
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Form Validation */
+.validation-error {
+    border-color: #ef4444 !important;
+}
+
+.error-message {
+    color: #ef4444;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+/* Loading States */
+.valuation-loading {
+    opacity: 0.7;
+    pointer-events: none;
+    position: relative;
+}
+
+.valuation-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #e5e7eb;
+    border-top: 2px solid #10b981;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Save Progress Animation */
+.save-progress-btn.saving {
+    color: #10b981;
+}
+
+.save-progress-btn.saving i {
+    animation: spin 1s linear infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .property-type-selector,
+    .condition-selector {
+        grid-template-columns: 1fr;
+    }
+    
+    .energy-label-selector {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .amenities-selector {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .neighborhood-map {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Print Styles for Report */
+@media print {
+    .valuation-step:not(.active) {
+        display: none !important;
+    }
+    
+    .valuation-step.active {
+        position: relative;
+        opacity: 1;
+        transform: none;
+    }
+    
+    button {
+        display: none !important;
+    }
+}
+
+/* Step Number Animation */
+.valuation-step .w-8 {
+    transition: all 0.3s ease;
+}
+
+.valuation-step.active .w-8 {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+/* Neighborhood Price Indicators */
+.neighborhood-price {
+    font-size: 0.75rem;
+    color: #6b7280;
+    transition: color 0.3s ease;
+}
+
+.neighborhood-option button.active .neighborhood-price {
+    color: #10b981;
+    font-weight: 600;
+}

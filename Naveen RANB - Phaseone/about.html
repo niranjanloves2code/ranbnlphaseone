@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | NordicEstates - Scandinavian Real Estate Excellence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- About Page Styles -->
+    <link rel="stylesheet" href="./styles/aboutuspagestyles/aboutherostoryvalue.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="./styles/aboutuspagestyles/teamvaluesanddifferentiator.css">
+    
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'emerald': {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            200: '#a7f3d0',
+                            300: '#6ee7b7',
+                            400: '#34d399',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            800: '#065f46',
+                            900: '#064e3b',
+                        }
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'slide-in-left': 'slideInLeft 0.8s ease-out forwards',
+                        'slide-in-right': 'slideInRight 0.8s ease-out forwards',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter bg-slate-50">
+    <!-- Navigation -->
+    
+       <nav class="fixed w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm transition-all duration-300">
+    <div class="container mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 bg-emerald-600 rounded-lg"></div>
+                <span class="text-2xl font-semibold text-gray-800">NordicEstates</span>
+            </div>
+            
+            <div class="hidden md:flex space-x-8 relative">
+                <a href="index.html" class="text-gray-600 hover:text-emerald-600 transition-colors duration-300">Home</a>
+                
+                <!-- Properties Mega Menu Trigger -->
+                <div class="relative group" id="properties-mega-menu">
+                    <button class="text-gray-600 hover:text-emerald-600 transition-colors duration-300 flex items-center">
+                        Properties
+                        <i class="fas fa-chevron-down ml-1 text-xs transition-transform duration-300 group-hover:rotate-180"></i>
+                    </button>
+                    
+                    <!-- Mega Menu Dropdown -->
+                    <div class="absolute top-full left-0 w-96 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-100 mt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <div class="p-6">
+                            <div class="grid grid-cols-1 gap-4">
+                                <!-- Buy Option -->
+                                <a href="buy.html" class="mega-menu-item group flex items-start space-x-4 p-4 rounded-xl hover:bg-slate-50 transition-all duration-300 border border-transparent hover:border-emerald-100">
+                                    <div class="flex-shrink-0 w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center group-hover:bg-emerald-200 transition-colors duration-300">
+                                        <i class="fas fa-home text-emerald-600 text-lg"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="font-semibold text-gray-800 group-hover:text-emerald-700 transition-colors duration-300">Buy</h3>
+                                        <p class="text-sm text-gray-600 mt-1">Find your dream home in prime Dutch locations</p>
+                                        <div class="flex items-center mt-2 text-xs text-emerald-600">
+                                            <span>2,345 properties available</span>
+                                            <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                                
+                                <!-- Sell Option -->
+                                <a href="sell.html" class="mega-menu-item group flex items-start space-x-4 p-4 rounded-xl hover:bg-slate-50 transition-all duration-300 border border-transparent hover:border-blue-100">
+                                    <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-200 transition-colors duration-300">
+                                        <i class="fas fa-euro-sign text-blue-600 text-lg"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="font-semibold text-gray-800 group-hover:text-blue-700 transition-colors duration-300">Sell</h3>
+                                        <p class="text-sm text-gray-600 mt-1">Get maximum value for your property, minimally stressed</p>
+                                        <div class="flex items-center mt-2 text-xs text-blue-600">
+                                            <span>Free valuation in 24h</span>
+                                            <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                                
+                                <!-- Rent Option -->
+                                <a href="rent.html" class="mega-menu-item group flex items-start space-x-4 p-4 rounded-xl hover:bg-slate-50 transition-all duration-300 border border-transparent hover:border-orange-100">
+                                    <div class="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center group-hover:bg-orange-200 transition-colors duration-300">
+                                        <i class="fas fa-key text-orange-600 text-lg"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="font-semibold text-gray-800 group-hover:text-orange-700 transition-colors duration-300">Rent</h3>
+                                        <p class="text-sm text-gray-600 mt-1">Discover perfect rentals, from studios to family homes</p>
+                                        <div class="flex items-center mt-2 text-xs text-orange-600">
+                                            <span>123 homes available now</span>
+                                            <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                            <!-- Quick Links Footer -->
+                            <div class="mt-6 pt-4 border-t border-gray-100">
+                                <div class="grid grid-cols-3 gap-4 text-center">
+                                    <a href="#" class="text-xs text-gray-500 hover:text-emerald-600 transition-colors duration-300">Mortgage Calculator</a>
+                                    <a href="#" class="text-xs text-gray-500 hover:text-blue-600 transition-colors duration-300">Market Report</a>
+                                    <a href="#" class="text-xs text-gray-500 hover:text-orange-600 transition-colors duration-300">Rental Guide</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="#" class="text-gray-600 hover:text-emerald-600 transition-colors duration-300">About</a>
+                <a href="#" class="text-gray-600 hover:text-emerald-600 transition-colors duration-300">Contact</a>
+            </div>
+            
+            <button class="bg-emerald-600 text-white px-6 py-2 rounded-lg hover:bg-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                Get Started
+            </button>
+        </div>
+    </div>
+</nav>
+
+    <!-- Phase 1: Hero Section -->
+    <section class="pt-32 pb-20 about-hero-section bg-gradient-to-br from-slate-50 to-emerald-50 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-4.0.1&auto=format&fit=crop&w=2850&q=80')] bg-cover bg-center"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <!-- Trust Badges -->
+                <div class="flex flex-wrap justify-center gap-4 mb-8">
+                    <div class="trust-badge bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-emerald-100">
+                        <span class="text-emerald-600 font-semibold">12+</span>
+                        <span class="text-gray-600 ml-1">Years Experience</span>
+                    </div>
+                    <div class="trust-badge bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-emerald-100">
+                        <span class="text-emerald-600 font-semibold">5,000+</span>
+                        <span class="text-gray-600 ml-1">Properties Handled</span>
+                    </div>
+                    <div class="trust-badge bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-emerald-100">
+                        <span class="text-emerald-600 font-semibold">98%</span>
+                        <span class="text-gray-600 ml-1">Client Satisfaction</span>
+                    </div>
+                </div>
+
+                <!-- Main Headline -->
+                <h1 class="text-5xl md:text-6xl font-light text-gray-800 mb-6 animate-fade-in-up">
+                    Scandinavian Excellence
+                    <span class="block font-semibold text-emerald-600">in Dutch Real Estate</span>
+                </h1>
+                
+                <!-- Subheadline -->
+                <p class="text-xl text-gray-600 mb-8 animate-fade-in-up max-w-2xl mx-auto">
+                    Bringing Nordic design principles, transparency, and exceptional service to the Netherlands' property market
+                </p>
+
+                <!-- Animated Value Counter -->
+                <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-emerald-100 mb-8 animate-fade-in-up">
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                        <div class="text-center">
+                            <div class="text-3xl md:text-4xl font-bold text-emerald-600 value-counter" data-target="12">0</div>
+                            <div class="text-gray-600 text-sm">Years of excellence</div>
+                        </div>
+                        <div class="hidden sm:block w-px h-12 bg-emerald-200"></div>
+                        <div class="text-center">
+                            <div class="text-3xl md:text-4xl font-bold text-emerald-600 value-counter" data-target="98">0</div>
+                            <div class="text-gray-600 text-sm">Client satisfaction rate</div>
+                        </div>
+                        <div class="hidden sm:block w-px h-12 bg-emerald-200"></div>
+                        <div class="text-center">
+                            <div class="text-3xl md:text-4xl font-bold text-emerald-600 value-counter" data-target="5000">0</div>
+                            <div class="text-gray-600 text-sm">Successful transactions</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up">
+                    <button class="meet-team-btn bg-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center">
+                        <i class="fas fa-users mr-3"></i>
+                        Meet Our Team
+                    </button>
+                    <button class="story-btn border-2 border-emerald-600 text-emerald-600 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-600 hover:text-white transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+                        <i class="fas fa-history mr-3"></i>
+                        Our Story
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Phase 1: Our Story Timeline -->
+    <section class="py-20 about-story-section bg-white" id="our-story">
+        <div class="container mx-auto px-6">
+            <!-- Section Header -->
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-4xl font-light text-gray-800 mb-4">Our Story</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">From Nordic roots to Dutch excellence - our journey of redefining real estate</p>
+            </div>
+
+            <div class="max-w-6xl mx-auto">
+                <!-- Timeline -->
+                <div class="timeline-container">
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item fade-in-up">
+                        <div class="timeline-marker">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-line"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2012</div>
+                            <h3 class="timeline-title">The Beginning</h3>
+                            <p class="timeline-description">
+                                Founded in Amsterdam by Swedish-Dutch partners with a vision to bring Scandinavian transparency and design sensibility to the Dutch real estate market.
+                            </p>
+                            <div class="timeline-image">
+                                <img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?ixlib=rb-4.0.1&auto=format&fit=crop&w=600&q=80" alt="NordicEstates Founding" class="rounded-lg">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-item fade-in-up">
+                        <div class="timeline-marker">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-line"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2015</div>
+                            <h3 class="timeline-title">Scandinavian Approach</h3>
+                            <p class="timeline-description">
+                                Introduced our unique Nordic methodology: minimal paperwork, maximum transparency, and focus on sustainable, well-designed properties.
+                            </p>
+                            <div class="timeline-stats">
+                                <div class="stat">
+                                    <div class="stat-number">500+</div>
+                                    <div class="stat-label">Properties</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-number">95%</div>
+                                    <div class="stat-label">Satisfaction</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 3 -->
+                    <div class="timeline-item fade-in-up">
+                        <div class="timeline-marker">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-line"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2018</div>
+                            <h3 class="timeline-title">Digital Transformation</h3>
+                            <p class="timeline-description">
+                                Launched our proprietary digital platform, combining Nordic simplicity with Dutch efficiency for seamless property transactions.
+                            </p>
+                            <div class="timeline-features">
+                                <div class="feature">
+                                    <i class="fas fa-laptop-house text-emerald-600"></i>
+                                    <span>Virtual Tours</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-file-contract text-emerald-600"></i>
+                                    <span>Digital Contracts</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-chart-line text-emerald-600"></i>
+                                    <span>Market Analytics</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 4 -->
+                    <div class="timeline-item fade-in-up">
+                        <div class="timeline-marker">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-line"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2024</div>
+                            <h3 class="timeline-title">Today & Beyond</h3>
+                            <p class="timeline-description">
+                                Leading the Dutch real estate market with Scandinavian design principles, trusted by thousands of clients across the Netherlands.
+                            </p>
+                            <div class="timeline-achievements">
+                                <div class="achievement">
+                                    <i class="fas fa-trophy text-emerald-600"></i>
+                                    <span>Best Real Estate Agency 2023</span>
+                                </div>
+                                <div class="achievement">
+                                    <i class="fas fa-award text-emerald-600"></i>
+                                    <span>Customer Service Excellence</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Phase 1: Values Showcase -->
+    <section class="py-20 about-values-section bg-slate-50" id="our-values">
+        <div class="container mx-auto px-6">
+            <!-- Section Header -->
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-4xl font-light text-gray-800 mb-4">Our Scandinavian Values</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">The principles that guide everything we do</p>
+            </div>
+
+            <div class="max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Value 1 -->
+                    <div class="value-card fade-in-up">
+                        <div class="value-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3 class="value-title">Transparency</h3>
+                        <p class="value-description">
+                            Complete honesty in every transaction. No hidden fees, no surprises - just clear, straightforward real estate services.
+                        </p>
+                        <div class="value-features">
+                            <div class="feature">
+                                <i class="fas fa-check text-emerald-600"></i>
+                                <span>Full cost breakdowns</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check text-emerald-600"></i>
+                                <span>Open communication</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check text-emerald-600"></i>
+                                <span>No surprise fees</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Value 2 -->
+                    <div class="value-card fade-in-up">
+                        <div class="value-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3 class="value-title">Simplicity</h3>
+                        <p class="value-description">
+                            We believe in minimalism and efficiency. Streamlined processes that remove complexity from your real estate journey.
+                        </p>
+                        <div class="value-features">
+                            <div class="feature">
+                                <i class="fas fa-check text-emerald-600"></i>
+                                <span>Digital-first approach</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check text-emerald-600"></i>
+                                <span>Clear documentation</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check text-emerald-600"></i>
+                                <span>Streamlined processes</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Value 3 -->
+                    <div class="value-card fade-in-up">
+                        <div class="value-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="value-title">Quality</h3>
+                        <p class="value-description">
+                            Exceptional service meets outstanding properties. We focus on well-designed, sustainable homes that stand the test of time.
+                        </p>
+                        <div class="value-features">
+                            <div class="feature">
+                                <i class="fas fa-check text-emerald-600"></i>
+                                <span>Curated property selection</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check text-emerald-600"></i>
+                                <span>Expert consultations</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check text-emerald-600"></i>
+                                <span>Sustainable focus</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Philosophy Statement -->
+                <div class="mt-16 text-center fade-in-up">
+                    <div class="bg-white rounded-2xl p-8 shadow-lg border border-emerald-100 max-w-4xl mx-auto">
+                        <h3 class="text-2xl font-light text-gray-800 mb-4">The NordicEstates Philosophy</h3>
+                        <p class="text-gray-600 text-lg leading-relaxed">
+                            "We believe that finding or selling a home should be a joyful, transparent experience. By combining Scandinavian design principles with Dutch practicality, we've created a real estate service that values people over paperwork, quality over quantity, and long-term relationships over quick transactions."
+                        </p>
+                        <div class="mt-6 flex items-center justify-center">
+                            <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-quote-left text-emerald-600"></i>
+                            </div>
+                            <div class="text-left">
+                                <div class="font-semibold text-gray-800">Erik Johansson</div>
+                                <div class="text-sm text-gray-600">Founder & CEO</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add these sections after the Values section -->
+
+<!-- Phase 2: Team Showcase -->
+<section class="py-20 about-team-section bg-white" id="our-team">
+    <div class="container mx-auto px-6">
+        <!-- Section Header -->
+        <div class="text-center mb-16 fade-in-up">
+            <h2 class="text-4xl font-light text-gray-800 mb-4">Meet Our Team</h2>
+            <p class="text-gray-600 text-lg max-w-2xl mx-auto">The passionate experts behind NordicEstates' success</p>
+        </div>
+
+        <div class="max-w-7xl mx-auto">
+            <!-- Leadership Team -->
+            <div class="mb-16 fade-in-up">
+                <h3 class="text-2xl font-light text-gray-800 mb-8 text-center">Leadership</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Team Member 1 -->
+                    <div class="team-card" data-member="erik">
+                        <div class="team-image">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.1&auto=format&fit=crop&w=400&q=80" alt="Erik Johansson">
+                            <div class="team-overlay">
+                                <div class="social-links">
+                                    <a href="#" class="social-link">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                    <a href="#" class="social-link">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="social-link">
+                                        <i class="fas fa-envelope"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-content">
+                            <h4 class="team-name">Erik Johansson</h4>
+                            <p class="team-role">Founder & CEO</p>
+                            <p class="team-bio">Swedish-born real estate visionary with 15+ years in Dutch property market</p>
+                            <div class="team-stats">
+                                <div class="stat">
+                                    <span class="stat-number">12</span>
+                                    <span class="stat-label">Years</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">2,000+</span>
+                                    <span class="stat-label">Deals</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 2 -->
+                    <div class="team-card" data-member="sophie">
+                        <div class="team-image">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.1&auto=format&fit=crop&w=400&q=80" alt="Sophie van der Berg">
+                            <div class="team-overlay">
+                                <div class="social-links">
+                                    <a href="#" class="social-link">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                    <a href="#" class="social-link">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="social-link">
+                                        <i class="fas fa-envelope"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-content">
+                            <h4 class="team-name">Sophie van der Berg</h4>
+                            <p class="team-role">COO</p>
+                            <p class="team-bio">Operations expert ensuring seamless client experiences across all transactions</p>
+                            <div class="team-stats">
+                                <div class="stat">
+                                    <span class="stat-number">8</span>
+                                    <span class="stat-label">Years</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">98%</span>
+                                    <span class="stat-label">Satisfaction</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 3 -->
+                    <div class="team-card" data-member="mikael">
+                        <div class="team-image">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.1&auto=format&fit=crop&w=400&q=80" alt="Mikael Andersen">
+                            <div class="team-overlay">
+                                <div class="social-links">
+                                    <a href="#" class="social-link">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                    <a href="#" class="social-link">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="social-link">
+                                        <i class="fas fa-envelope"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-content">
+                            <h4 class="team-name">Mikael Andersen</h4>
+                            <p class="team-role">Head of Design</p>
+                            <p class="team-bio">Danish architect transforming properties with Scandinavian design principles</p>
+                            <div class="team-stats">
+                                <div class="stat">
+                                    <span class="stat-number">10</span>
+                                    <span class="stat-label">Years</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">500+</span>
+                                    <span class="stat-label">Projects</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Department Teams -->
+            <div class="fade-in-up">
+                <h3 class="text-2xl font-light text-gray-800 mb-8 text-center">Expert Departments</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Department 1 -->
+                    <div class="department-card">
+                        <div class="department-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h4 class="department-title">Residential Sales</h4>
+                        <p class="department-staff">12 specialists</p>
+                        <div class="department-stats">
+                            <div class="stat">
+                                <span class="stat-number">1,200+</span>
+                                <span class="stat-label">Homes Sold</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Department 2 -->
+                    <div class="department-card">
+                        <div class="department-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h4 class="department-title">Commercial</h4>
+                        <p class="department-staff">8 specialists</p>
+                        <div class="department-stats">
+                            <div class="stat">
+                                <span class="stat-number">350+</span>
+                                <span class="stat-label">Properties</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Department 3 -->
+                    <div class="department-card">
+                        <div class="department-icon">
+                            <i class="fas fa-key"></i>
+                        </div>
+                        <h4 class="department-title">Rental Services</h4>
+                        <p class="department-staff">15 specialists</p>
+                        <div class="department-stats">
+                            <div class="stat">
+                                <span class="stat-number">3,000+</span>
+                                <span class="stat-label">Tenants</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Department 4 -->
+                    <div class="department-card">
+                        <div class="department-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h4 class="department-title">Client Support</h4>
+                        <p class="department-staff">10 specialists</p>
+                        <div class="department-stats">
+                            <div class="stat">
+                                <span class="stat-number">24/7</span>
+                                <span class="stat-label">Support</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Phase 2: Differentiators -->
+<section class="py-20 about-differentiators-section bg-slate-50" id="what-makes-us-different">
+    <div class="container mx-auto px-6">
+        <!-- Section Header -->
+        <div class="text-center mb-16 fade-in-up">
+            <h2 class="text-4xl font-light text-gray-800 mb-4">What Makes Us Different</h2>
+            <p class="text-gray-600 text-lg max-w-2xl mx-auto">The NordicEstates advantage in Dutch real estate</p>
+        </div>
+
+        <div class="max-w-7xl mx-auto">
+            <!-- Comparison Table -->
+            <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden mb-16 fade-in-up">
+                <div class="bg-gradient-to-r from-emerald-500 to-emerald-600 p-6">
+                    <h3 class="text-2xl font-semibold text-white text-center">NordicEstates vs Traditional Agencies</h3>
+                </div>
+                <div class="p-6">
+                    <div class="comparison-table">
+                        <div class="comparison-header">
+                            <div class="comparison-cell feature-cell">Feature</div>
+                            <div class="comparison-cell">NordicEstates</div>
+                            <div class="comparison-cell">Traditional Agencies</div>
+                        </div>
+                        
+                        <div class="comparison-row">
+                            <div class="comparison-cell feature-cell">Transparency</div>
+                            <div class="comparison-cell">
+                                <i class="fas fa-check-circle text-emerald-600"></i>
+                                <span>Full cost breakdown</span>
+                            </div>
+                            <div class="comparison-cell">
+                                <i class="fas fa-times-circle text-red-500"></i>
+                                <span>Hidden fees common</span>
+                            </div>
+                        </div>
+                        
+                        <div class="comparison-row">
+                            <div class="comparison-cell feature-cell">Technology</div>
+                            <div class="comparison-cell">
+                                <i class="fas fa-check-circle text-emerald-600"></i>
+                                <span>Digital-first platform</span>
+                            </div>
+                            <div class="comparison-cell">
+                                <i class="fas fa-times-circle text-red-500"></i>
+                                <span>Paper-based processes</span>
+                            </div>
+                        </div>
+                        
+                        <div class="comparison-row">
+                            <div class="comparison-cell feature-cell">Design Focus</div>
+                            <div class="comparison-cell">
+                                <i class="fas fa-check-circle text-emerald-600"></i>
+                                <span>Scandinavian principles</span>
+                            </div>
+                            <div class="comparison-cell">
+                                <i class="fas fa-minus-circle text-yellow-500"></i>
+                                <span>Traditional approach</span>
+                            </div>
+                        </div>
+                        
+                        <div class="comparison-row">
+                            <div class="comparison-cell feature-cell">Client Support</div>
+                            <div class="comparison-cell">
+                                <i class="fas fa-check-circle text-emerald-600"></i>
+                                <span>Dedicated specialist</span>
+                            </div>
+                            <div class="comparison-cell">
+                                <i class="fas fa-minus-circle text-yellow-500"></i>
+                                <span>General agent</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Differentiators -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <!-- Differentiator 1 -->
+                <div class="differentiator-card fade-in-up">
+                    <div class="differentiator-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="differentiator-title">Speed & Efficiency</h3>
+                    <p class="differentiator-description">
+                        Our streamlined processes and digital tools reduce transaction times by 40% compared to industry averages.
+                    </p>
+                    <div class="differentiator-stats">
+                        <div class="stat">
+                            <div class="stat-number">7</div>
+                            <div class="stat-label">Days avg. to offer</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Differentiator 2 -->
+                <div class="differentiator-card fade-in-up">
+                    <div class="differentiator-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="differentiator-title">Data-Driven Insights</h3>
+                    <p class="differentiator-description">
+                        Advanced market analytics ensure optimal pricing and timing for both buyers and sellers.
+                    </p>
+                    <div class="differentiator-stats">
+                        <div class="stat">
+                            <div class="stat-number">102%</div>
+                            <div class="stat-label">Of asking price avg.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Differentiator 3 -->
+                <div class="differentiator-card fade-in-up">
+                    <div class="differentiator-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="differentiator-title">Risk Mitigation</h3>
+                    <p class="differentiator-description">
+                        Comprehensive due diligence and legal support protect our clients throughout the transaction process.
+                    </p>
+                    <div class="differentiator-stats">
+                        <div class="stat">
+                            <div class="stat-number">0</div>
+                            <div class="stat-label">Legal disputes</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Client Success Metrics -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg border border-emerald-100 fade-in-up">
+                <h3 class="text-2xl font-light text-gray-800 mb-8 text-center">Client Success Stories</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="success-metric text-center">
+                        <div class="metric-value text-4xl font-bold text-emerald-600 mb-2">98%</div>
+                        <div class="metric-label text-gray-600">Client Satisfaction Rate</div>
+                        <div class="metric-description text-sm text-gray-500 mt-2">Based on post-transaction surveys</div>
+                    </div>
+                    <div class="success-metric text-center">
+                        <div class="metric-value text-4xl font-bold text-emerald-600 mb-2">72%</div>
+                        <div class="metric-label text-gray-600">Repeat Business</div>
+                        <div class="metric-description text-sm text-gray-500 mt-2">Clients who return for future transactions</div>
+                    </div>
+                    <div class="success-metric text-center">
+                        <div class="metric-value text-4xl font-bold text-emerald-600 mb-2">4.9/5</div>
+                        <div class="metric-label text-gray-600">Average Rating</div>
+                        <div class="metric-description text-sm text-gray-500 mt-2">Across all review platforms</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-emerald-500 rounded-lg"></div>
+                        <span class="text-2xl font-semibold">NordicEstates</span>
+                    </div>
+                    <p class="text-gray-400">Creating beautiful living spaces inspired by Scandinavian design principles.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="buy.html" class="hover:text-white transition-colors">Buy Properties</a></li>
+                        <li><a href="sell.html" class="hover:text-white transition-colors">Sell Your Property</a></li>
+                        <li><a href="rent.html" class="hover:text-white transition-colors">Rent a Home</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3"></i>
+                            <span>123 Keizersgracht, Amsterdam</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3"></i>
+                            <span>+31 20 123 4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <span>hello@nordicestates.nl</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Subscribe for market insights</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg text-gray-800 w-full">
+                        <button class="bg-emerald-500 px-4 py-2 rounded-r-lg hover:bg-emerald-600 transition-colors">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 NordicEstates. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- About Page Scripts -->
+    <script src="./js/aboutpage.js/aboutherosection.js"></script>
+     <script src="js/script.js"></script>
+    <script src="js/megamenu.js"></script>
+    <script src="./js/aboutpage.js/aboutteamvaluesdifferentiator.js"></script>
+</body>
+</html>

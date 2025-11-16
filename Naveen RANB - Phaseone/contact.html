@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nordic Estates | Scandinavian Real Estate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="./styles/contactpagestyles/contacthero.css">
+    <link rel="stylesheet" href="./styles/contactpagestyles/contactform.css">
+    <link rel="stylesheet" href="./styles/contactpagestyles/expertmatch.css">
+    <link rel="stylesheet" href="./styles/contactpagestyles/officelocation.css">
+</head>
+<body class="font-inter bg-slate-50">
+    <!-- Navigation -->
+    <!-- <nav class="fixed w-full bg-white/90 backdrop-blur-sm z-50 shadow-sm transition-all duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-emerald-600 rounded-lg"></div>
+                    <span class="text-2xl font-semibold text-gray-800">NordicEstates</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-600 hover:text-emerald-600 transition-colors duration-300">Home</a>
+                    <a href="#" class="text-gray-600 hover:text-emerald-600 transition-colors duration-300">Properties</a>
+                    <a href="#" class="text-gray-600 hover:text-emerald-600 transition-colors duration-300">About</a>
+                    <a href="#" class="text-gray-600 hover:text-emerald-600 transition-colors duration-300">Contact</a>
+                </div>
+                
+                <button class="bg-emerald-600 text-white px-6 py-2 rounded-lg hover:bg-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                    Get Started
+                </button>
+            </div>
+        </div>
+    </nav> -->
+
+    <!-- Updated Navigation Section -->
+<nav class="fixed w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm transition-all duration-300">
+    <div class="container mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 bg-emerald-600 rounded-lg"></div>
+                <span class="text-2xl font-semibold text-gray-800">NordicEstates</span>
+            </div>
+            
+            <div class="hidden md:flex space-x-8 relative">
+                <a href="#" class="text-gray-600 hover:text-emerald-600 transition-colors duration-300">Home</a>
+                
+                <!-- Properties Mega Menu Trigger -->
+                <div class="relative group" id="properties-mega-menu">
+                    <button class="text-gray-600 hover:text-emerald-600 transition-colors duration-300 flex items-center">
+                        Properties
+                        <i class="fas fa-chevron-down ml-1 text-xs transition-transform duration-300 group-hover:rotate-180"></i>
+                    </button>
+                    
+                    <!-- Mega Menu Dropdown -->
+                    <div class="absolute top-full left-0 w-96 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-100 mt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <div class="p-6">
+                            <div class="grid grid-cols-1 gap-4">
+                                <!-- Buy Option -->
+                                <a href="buy.html" class="mega-menu-item group flex items-start space-x-4 p-4 rounded-xl hover:bg-slate-50 transition-all duration-300 border border-transparent hover:border-emerald-100">
+                                    <div class="flex-shrink-0 w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center group-hover:bg-emerald-200 transition-colors duration-300">
+                                        <i class="fas fa-home text-emerald-600 text-lg"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="font-semibold text-gray-800 group-hover:text-emerald-700 transition-colors duration-300">Buy</h3>
+                                        <p class="text-sm text-gray-600 mt-1">Find your dream home in prime Dutch locations</p>
+                                        <div class="flex items-center mt-2 text-xs text-emerald-600">
+                                            <span>2,345 properties available</span>
+                                            <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                                
+                                <!-- Sell Option -->
+                                <a href="sell.html" class="mega-menu-item group flex items-start space-x-4 p-4 rounded-xl hover:bg-slate-50 transition-all duration-300 border border-transparent hover:border-blue-100">
+                                    <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-200 transition-colors duration-300">
+                                        <i class="fas fa-euro-sign text-blue-600 text-lg"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="font-semibold text-gray-800 group-hover:text-blue-700 transition-colors duration-300">Sell</h3>
+                                        <p class="text-sm text-gray-600 mt-1">Get maximum value for your property, minimally stressed</p>
+                                        <div class="flex items-center mt-2 text-xs text-blue-600">
+                                            <span>Free valuation in 24h</span>
+                                            <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                                
+                                <!-- Rent Option -->
+                                <a href="rent.html" class="mega-menu-item group flex items-start space-x-4 p-4 rounded-xl hover:bg-slate-50 transition-all duration-300 border border-transparent hover:border-orange-100">
+                                    <div class="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center group-hover:bg-orange-200 transition-colors duration-300">
+                                        <i class="fas fa-key text-orange-600 text-lg"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="font-semibold text-gray-800 group-hover:text-orange-700 transition-colors duration-300">Rent</h3>
+                                        <p class="text-sm text-gray-600 mt-1">Discover perfect rentals, from studios to family homes</p>
+                                        <div class="flex items-center mt-2 text-xs text-orange-600">
+                                            <span>123 homes available now</span>
+                                            <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                            <!-- Quick Links Footer -->
+                            <div class="mt-6 pt-4 border-t border-gray-100">
+                                <div class="grid grid-cols-3 gap-4 text-center">
+                                    <a href="#" class="text-xs text-gray-500 hover:text-emerald-600 transition-colors duration-300">Mortgage Calculator</a>
+                                    <a href="#" class="text-xs text-gray-500 hover:text-blue-600 transition-colors duration-300">Market Report</a>
+                                    <a href="#" class="text-xs text-gray-500 hover:text-orange-600 transition-colors duration-300">Rental Guide</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="about.html" class="text-gray-600 hover:text-emerald-600 transition-colors duration-300">About</a>
+                <a href="#" class="text-gray-600 hover:text-emerald-600 transition-colors duration-300">Contact</a>
+            </div>
+            
+            <button class="bg-emerald-600 text-white px-6 py-2 rounded-lg hover:bg-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                Get Started
+            </button>
+        </div>
+    </div>
+</nav>
+
+
+ <section class="pt-32 pb-20 contact-hero-section bg-gradient-to-br from-slate-50 to-emerald-50 relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-4.0.1&auto=format&fit=crop&w=2850&q=80')] bg-cover bg-center"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-6xl mx-auto">
+                <!-- Trust Badges -->
+                <div class="flex flex-wrap justify-center gap-4 mb-8">
+                    <div class="trust-badge bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-emerald-100">
+                        <i class="fas fa-clock text-emerald-600 mr-2"></i>
+                        <span class="text-emerald-600 font-semibold"><2h</span>
+                        <span class="text-gray-600 ml-1">Avg. Response</span>
+                    </div>
+                    <div class="trust-badge bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-emerald-100">
+                        <i class="fas fa-star text-emerald-600 mr-2"></i>
+                        <span class="text-emerald-600 font-semibold">98%</span>
+                        <span class="text-gray-600 ml-1">Satisfaction</span>
+                    </div>
+                    <div class="trust-badge bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-emerald-100">
+                        <i class="fas fa-users text-emerald-600 mr-2"></i>
+                        <span class="text-emerald-600 font-semibold">45</span>
+                        <span class="text-gray-600 ml-1">Experts Ready</span>
+                    </div>
+                </div>
+
+                <!-- Main Headline -->
+                <div class="text-center mb-12">
+                    <h1 class="text-5xl md:text-6xl font-light text-gray-800 mb-6 animate-fade-in-up">
+                        Your Scandinavian Real Estate
+                        <span class="block font-semibold text-emerald-600">Journey Starts Here</span>
+                    </h1>
+                    
+                    <p class="text-xl text-gray-600 mb-8 animate-fade-in-up max-w-3xl mx-auto leading-relaxed">
+                        Experience transparent, personalized service that combines Nordic design principles with Dutch real estate expertise. Tell us about your needs, and we'll match you with the perfect specialist.
+                    </p>
+                </div>
+
+                <!-- Service Toggle -->
+                <div class="service-toggle-container max-w-2xl mx-auto mb-12 animate-fade-in-up">
+                    <div class="bg-white rounded-2xl p-2 shadow-lg border border-emerald-100 inline-flex">
+                        <button class="service-option active" data-service="buy">
+                            <i class="fas fa-home mr-3"></i>
+                            Buy a Property
+                        </button>
+                        <button class="service-option" data-service="sell">
+                            <i class="fas fa-euro-sign mr-3"></i>
+                            Sell a Property
+                        </button>
+                        <button class="service-option" data-service="rent">
+                            <i class="fas fa-key mr-3"></i>
+                            Rent a Home
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service Preview Cards -->
+                <div class="service-previews-grid grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                    <!-- Buy Preview -->
+                    <div class="service-preview-card active" data-service="buy">
+                        <div class="preview-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3 class="preview-title">Find Your Dream Home</h3>
+                        <p class="preview-description">
+                            Get personalized property recommendations and expert guidance through the entire buying process.
+                        </p>
+                        <div class="preview-features">
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Property matching</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Viewing scheduling</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Mortgage advice</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sell Preview -->
+                    <div class="service-preview-card" data-service="sell">
+                        <div class="preview-icon">
+                            <i class="fas fa-euro-sign"></i>
+                        </div>
+                        <h3 class="preview-title">Maximize Your Sale</h3>
+                        <p class="preview-description">
+                            Achieve the best price for your property with our strategic marketing and negotiation expertise.
+                        </p>
+                        <div class="preview-features">
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Free valuation</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Professional marketing</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Expert negotiation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rent Preview -->
+                    <div class="service-preview-card" data-service="rent">
+                        <div class="preview-icon">
+                            <i class="fas fa-key"></i>
+                        </div>
+                        <h3 class="preview-title">Perfect Rental Match</h3>
+                        <p class="preview-description">
+                            Discover rental properties that fit your lifestyle, budget, and location preferences.
+                        </p>
+                        <div class="preview-features">
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Rental search</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Application support</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Contract guidance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="text-center mt-12 animate-fade-in-up">
+                    <button class="start-journey-btn bg-emerald-600 text-white px-12 py-4 rounded-lg font-semibold hover:bg-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center mx-auto">
+                        <i class="fas fa-paper-plane mr-3"></i>
+                        Start Your Journey
+                    </button>
+                    <p class="text-gray-500 text-sm mt-4">Get matched with your perfect real estate expert</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Replace the placeholder form section with this -->
+
+<!-- Phase 2: Intelligent Contact Form -->
+<section class="py-20 contact-form-section bg-white" id="contact-form">
+    <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto">
+            <!-- Form Header -->
+            <div class="text-center mb-12 fade-in-up">
+                <h2 class="text-4xl font-light text-gray-800 mb-4">Tell Us About Your Needs</h2>
+                <p class="text-gray-600 text-lg">We'll match you with the perfect real estate expert</p>
+            </div>
+
+            <!-- Progress Indicator -->
+            <div class="progress-indicator mb-8 fade-in-up">
+                <div class="flex justify-between items-center mb-4">
+                    <div class="step active" data-step="1">
+                        <div class="step-number">1</div>
+                        <span class="step-label">Service & Basics</span>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div class="step" data-step="2">
+                        <div class="step-number">2</div>
+                        <span class="step-label">Property Details</span>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div class="step" data-step="3">
+                        <div class="step-number">3</div>
+                        <span class="step-label">Preferences</span>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div class="step" data-step="4">
+                        <div class="step-number">4</div>
+                        <span class="step-label">Contact Info</span>
+                    </div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 25%"></div>
+                </div>
+            </div>
+
+            <!-- Dynamic Form Container -->
+            <div class="form-container bg-white rounded-2xl shadow-lg border border-emerald-100 overflow-hidden fade-in-up">
+                <!-- Form will be populated by JavaScript -->
+                <div id="form-content" class="p-8">
+                    <!-- Dynamic form content goes here -->
+                </div>
+
+                <!-- Form Navigation -->
+                <div class="form-navigation bg-gray-50 px-8 py-6 border-t border-gray-200 flex justify-between items-center">
+                    <button class="nav-btn nav-prev bg-gray-200 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-all transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none disabled:hover:bg-gray-200" disabled>
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        Previous
+                    </button>
+                    
+                    <div class="flex items-center space-x-4">
+                        <span class="text-sm text-gray-500 step-counter">Step 1 of 4</span>
+                        <button class="nav-btn nav-skip text-emerald-600 font-semibold hover:text-emerald-700 transition-colors">
+                            Skip this step
+                        </button>
+                    </div>
+                    
+                    <button class="nav-btn nav-next bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-all transform hover:scale-105">
+                        Next
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Quick Contact Options -->
+            <div class="quick-contact-options mt-12 grid md:grid-cols-3 gap-6 fade-in-up">
+                <div class="quick-option text-center p-6 bg-slate-50 rounded-xl border-2 border-transparent hover:border-emerald-300 transition-all cursor-pointer">
+                    <div class="quick-icon bg-emerald-100 text-emerald-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-phone text-xl"></i>
+                    </div>
+                    <h4 class="font-semibold text-gray-800 mb-2">Call Now</h4>
+                    <p class="text-gray-600 text-sm mb-3">Speak directly with an expert</p>
+                    <div class="text-emerald-600 font-semibold">+31 20 123 4567</div>
+                </div>
+
+                <div class="quick-option text-center p-6 bg-slate-50 rounded-xl border-2 border-transparent hover:border-emerald-300 transition-all cursor-pointer">
+                    <div class="quick-icon bg-emerald-100 text-emerald-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-comment text-xl"></i>
+                    </div>
+                    <h4 class="font-semibold text-gray-800 mb-2">Live Chat</h4>
+                    <p class="text-gray-600 text-sm mb-3">Get instant answers</p>
+                    <div class="text-emerald-600 font-semibold">Start Chat</div>
+                </div>
+
+                <div class="quick-option text-center p-6 bg-slate-50 rounded-xl border-2 border-transparent hover:border-emerald-300 transition-all cursor-pointer">
+                    <div class="quick-icon bg-emerald-100 text-emerald-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-video text-xl"></i>
+                    </div>
+                    <h4 class="font-semibold text-gray-800 mb-2">Video Call</h4>
+                    <p class="text-gray-600 text-sm mb-3">Face-to-face consultation</p>
+                    <div class="text-emerald-600 font-semibold">Schedule Call</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Phase 3: Expert Matching -->
+<section class="py-20 expert-matching-section bg-slate-50" id="expert-matching">
+    <div class="container mx-auto px-6">
+        <div class="max-w-6xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-4xl font-light text-gray-800 mb-4">Meet Your Perfect Match</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">We're matching you with specialists who understand your specific needs</p>
+            </div>
+
+            <!-- Matching Process -->
+            <div class="matching-process mb-12 fade-in-up">
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div class="process-step text-center">
+                        <div class="step-icon bg-emerald-100 text-emerald-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-user-check text-xl"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Profile Analysis</h4>
+                        <p class="text-gray-600 text-sm">Understanding your unique requirements</p>
+                    </div>
+                    
+                    <div class="process-step text-center">
+                        <div class="step-icon bg-emerald-100 text-emerald-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-search text-xl"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Expert Search</h4>
+                        <p class="text-gray-600 text-sm">Finding specialists in your area</p>
+                    </div>
+                    
+                    <div class="process-step text-center">
+                        <div class="step-icon bg-emerald-100 text-emerald-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-handshake text-xl"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Perfect Match</h4>
+                        <p class="text-gray-600 text-sm">Selecting your ideal expert</p>
+                    </div>
+                    
+                    <div class="process-step text-center">
+                        <div class="step-icon bg-emerald-100 text-emerald-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-comments text-xl"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Connection</h4>
+                        <p class="text-gray-600 text-sm">Direct introduction & consultation</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Expert Recommendations -->
+            <div class="expert-recommendations fade-in-up">
+                <div class="bg-white rounded-2xl shadow-lg border border-emerald-100 overflow-hidden">
+                    <div class="bg-gradient-to-r from-emerald-500 to-emerald-600 p-6">
+                        <div class="flex flex-col md:flex-row justify-between items-center">
+                            <div>
+                                <h3 class="text-2xl font-semibold text-white mb-2">Recommended Experts</h3>
+                                <p class="text-emerald-100">Specialists matched to your specific needs</p>
+                            </div>
+                            <div class="mt-4 md:mt-0">
+                                <span class="bg-white/20 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                                    <i class="fas fa-bolt mr-2"></i>
+                                    Real-time Matching
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6">
+                        <div id="expert-cards-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <!-- Expert cards will be populated by JavaScript -->
+                        </div>
+                        
+                        <!-- Loading State -->
+                        <div id="expert-loading" class="text-center py-12">
+                            <div class="loading-spinner-large mx-auto mb-4"></div>
+                            <p class="text-gray-600">Finding your perfect real estate match...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Match Confidence -->
+            <div class="match-confidence mt-8 fade-in-up">
+                <div class="bg-white rounded-2xl p-6 shadow-lg border border-emerald-100">
+                    <div class="flex flex-col md:flex-row justify-between items-center">
+                        <div class="flex-1">
+                            <h4 class="text-lg font-semibold text-gray-800 mb-2">Match Confidence Score</h4>
+                            <p class="text-gray-600 text-sm">How well our experts align with your requirements</p>
+                        </div>
+                        <div class="mt-4 md:mt-0">
+                            <div class="confidence-meter">
+                                <div class="meter-background">
+                                    <div class="meter-fill" id="confidence-fill" style="width: 0%"></div>
+                                </div>
+                                <div class="confidence-score text-2xl font-bold text-emerald-600" id="confidence-score">0%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Phase 3: Comprehensive Contact Methods -->
+<section class="py-20 contact-methods-section bg-white" id="contact-methods">
+    <div class="container mx-auto px-6">
+        <div class="max-w-6xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-4xl font-light text-gray-800 mb-4">Multiple Ways to Connect</h2>
+                <p class="text-gray-600 text-lg">Choose the contact method that works best for you</p>
+            </div>
+
+            <!-- Contact Methods Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <!-- Phone -->
+                <div class="contact-method-card" data-method="phone">
+                    <div class="method-icon bg-emerald-100 text-emerald-600">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h4 class="method-title">Phone Call</h4>
+                    <p class="method-description">Speak directly with our experts</p>
+                    <div class="method-details">
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Response: <strong>Immediate</strong></span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-user"></i>
+                            <span>Direct expert connection</span>
+                        </div>
+                    </div>
+                    <div class="method-actions">
+                        <button class="action-btn primary">
+                            <i class="fas fa-phone mr-2"></i>
+                            Call Now
+                        </button>
+                        <button class="action-btn secondary">
+                            <i class="fas fa-clock mr-2"></i>
+                            Schedule Call
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Video Call -->
+                <div class="contact-method-card" data-method="video">
+                    <div class="method-icon bg-blue-100 text-blue-600">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h4 class="method-title">Video Consultation</h4>
+                    <p class="method-description">Face-to-face virtual meeting</p>
+                    <div class="method-details">
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Response: <strong>Within 2h</strong></span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>Flexible scheduling</span>
+                        </div>
+                    </div>
+                    <div class="method-actions">
+                        <button class="action-btn primary">
+                            <i class="fas fa-video mr-2"></i>
+                            Schedule Now
+                        </button>
+                        <button class="action-btn secondary">
+                            <i class="fas fa-info-circle mr-2"></i>
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Live Chat -->
+                <div class="contact-method-card" data-method="chat">
+                    <div class="method-icon bg-green-100 text-green-600">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h4 class="method-title">Live Chat</h4>
+                    <p class="method-description">Instant messaging with experts</p>
+                    <div class="method-details">
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Response: <strong>< 1min</strong></span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-robot"></i>
+                            <span>AI + Human support</span>
+                        </div>
+                    </div>
+                    <div class="method-actions">
+                        <button class="action-btn primary">
+                            <i class="fas fa-comment mr-2"></i>
+                            Start Chat
+                        </button>
+                        <div class="availability-indicator online">
+                            <i class="fas fa-circle"></i>
+                            Live agents available
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Office Visit -->
+                <div class="contact-method-card" data-method="office">
+                    <div class="method-icon bg-purple-100 text-purple-600">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h4 class="method-title">Office Visit</h4>
+                    <p class="method-description">In-person consultation</p>
+                    <div class="method-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Amsterdam Center</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-coffee"></i>
+                            <span>Complimentary refreshments</span>
+                        </div>
+                    </div>
+                    <div class="method-actions">
+                        <button class="action-btn primary">
+                            <i class="fas fa-calendar mr-2"></i>
+                            Book Visit
+                        </button>
+                        <button class="action-btn secondary">
+                            <i class="fas fa-directions mr-2"></i>
+                            Get Directions
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Department Contacts -->
+            <div class="department-contacts fade-in-up">
+                <div class="bg-slate-50 rounded-2xl p-8">
+                    <h3 class="text-2xl font-light text-gray-800 mb-6 text-center">Specialized Department Contacts</h3>
+                    
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Residential Sales -->
+                        <div class="department-card">
+                            <div class="department-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <h4 class="department-title">Residential Sales</h4>
+                            <p class="department-description">Buying & selling homes</p>
+                            <div class="department-contact">
+                                <div class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    <span>+31 20 123 4561</span>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>sales@nordicestates.nl</span>
+                                </div>
+                            </div>
+                            <button class="department-cta">
+                                Contact Team
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                        </div>
+
+                        <!-- Rental Services -->
+                        <div class="department-card">
+                            <div class="department-icon">
+                                <i class="fas fa-key"></i>
+                            </div>
+                            <h4 class="department-title">Rental Services</h4>
+                            <p class="department-description">Tenant & landlord services</p>
+                            <div class="department-contact">
+                                <div class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    <span>+31 20 123 4562</span>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>rentals@nordicestates.nl</span>
+                                </div>
+                            </div>
+                            <button class="department-cta">
+                                Contact Team
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                        </div>
+
+                        <!-- Commercial -->
+                        <div class="department-card">
+                            <div class="department-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <h4 class="department-title">Commercial</h4>
+                            <p class="department-description">Office & retail spaces</p>
+                            <div class="department-contact">
+                                <div class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    <span>+31 20 123 4563</span>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>commercial@nordicestates.nl</span>
+                                </div>
+                            </div>
+                            <button class="department-cta">
+                                Contact Team
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                        </div>
+
+                        <!-- Client Support -->
+                        <div class="department-card">
+                            <div class="department-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <h4 class="department-title">Client Support</h4>
+                            <p class="department-description">General inquiries & support</p>
+                            <div class="department-contact">
+                                <div class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    <span>+31 20 123 4567</span>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>support@nordicestates.nl</span>
+                                </div>
+                            </div>
+                            <button class="department-cta">
+                                Contact Team
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Emergency Contact -->
+            <div class="emergency-contact mt-12 fade-in-up">
+                <div class="bg-red-50 border border-red-200 rounded-2xl p-6">
+                    <div class="flex flex-col md:flex-row items-center justify-between">
+                        <div class="flex items-center mb-4 md:mb-0">
+                            <div class="emergency-icon bg-red-100 text-red-600 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-red-800">Urgent Matter?</h4>
+                                <p class="text-red-700 text-sm">Contact our emergency support line</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="emergency-phone text-xl font-bold text-red-800">
+                                <i class="fas fa-phone mr-2"></i>
+                                +31 20 123 4599
+                            </div>
+                            <button class="bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors">
+                                Call Emergency Line
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Add this section after your existing contact methods section -->
+<!-- Phase 4: Location & Office Experience -->
+<section class="py-20 office-experience-section bg-white" id="office-experience">
+    <div class="container mx-auto px-6">
+        <div class="max-w-6xl mx-auto">
+            
+            <!-- Section Header -->
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-4xl font-light text-gray-800 mb-4">Visit Our Scandinavian-Inspired Office</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">Experience our Nordic design philosophy in person at our Amsterdam flagship location</p>
+            </div>
+
+            <!-- Main Content Grid -->
+            <div class="grid lg:grid-cols-2 gap-12 mb-16">
+                
+                <!-- Left Column - Interactive Map & Virtual Tour -->
+                <div class="space-y-8">
+                    
+                    <!-- Interactive Map -->
+                    <div class="map-container bg-slate-50 rounded-2xl overflow-hidden shadow-lg border border-emerald-100 fade-in-up">
+                        <div class="bg-gradient-to-r from-emerald-500 to-emerald-600 p-6">
+                            <h3 class="text-xl font-semibold text-white">Our Amsterdam Headquarters</h3>
+                            <p class="text-emerald-100">Keizersgracht 123, Amsterdam</p>
+                        </div>
+                        <div class="h-80 bg-gray-200 relative" id="map-container">
+                            <!-- Map will be initialized by JavaScript -->
+                            <div class="absolute inset-0 flex items-center justify-center bg-slate-100">
+                                <div class="text-center">
+                                    <i class="fas fa-map-marker-alt text-4xl text-emerald-600 mb-4"></i>
+                                    <p class="text-gray-600">Interactive Map Loading...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6 border-t border-gray-200">
+                            <div class="grid grid-cols-3 gap-4 text-center">
+                                <div>
+                                    <div class="text-emerald-600 font-semibold">5 min</div>
+                                    <div class="text-gray-600 text-sm">From Central Station</div>
+                                </div>
+                                <div>
+                                    <div class="text-emerald-600 font-semibold">Parking</div>
+                                    <div class="text-gray-600 text-sm">Available Nearby</div>
+                                </div>
+                                <div>
+                                    <div class="text-emerald-600 font-semibold">Tram</div>
+                                    <div class="text-gray-600 text-sm">Lines 2, 12, 13</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Virtual Tour -->
+                    <div class="virtual-tour-container bg-slate-50 rounded-2xl overflow-hidden shadow-lg border border-blue-100 fade-in-up">
+                        <div class="bg-gradient-to-r from-blue-500 to-blue-600 p-6">
+                            <h3 class="text-xl font-semibold text-white">Virtual Office Tour</h3>
+                            <p class="text-blue-100">Explore our space from anywhere</p>
+                        </div>
+                        <div class="h-64 bg-gradient-to-br from-blue-100 to-indigo-100 relative flex items-center justify-center">
+                            <div class="text-center">
+                                <i class="fas fa-vr-cardboard text-5xl text-blue-600 mb-4"></i>
+                                <h4 class="text-lg font-semibold text-gray-800 mb-2">360° Virtual Experience</h4>
+                                <p class="text-gray-600 mb-4">Walk through our office as if you were here</p>
+                                <button class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all transform hover:scale-105">
+                                    <i class="fas fa-play mr-2"></i>
+                                    Start Virtual Tour
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right Column - Office Info & Appointment -->
+                <div class="space-y-8">
+                    
+                    <!-- Office Hours & Info -->
+                    <div class="office-info bg-slate-50 rounded-2xl p-8 shadow-lg border border-emerald-100 fade-in-up">
+                        <h3 class="text-2xl font-light text-gray-800 mb-6">Office Information</h3>
+                        
+                        <div class="space-y-6">
+                            <!-- Visiting Hours -->
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center">
+                                    <i class="fas fa-clock text-emerald-600"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="font-semibold text-gray-800 mb-2">Visiting Hours</h4>
+                                    <div class="space-y-2 text-sm text-gray-600">
+                                        <div class="flex justify-between">
+                                            <span>Monday - Friday</span>
+                                            <span class="font-semibold text-emerald-600">9:00 - 18:00</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span>Saturday</span>
+                                            <span class="font-semibold text-emerald-600">10:00 - 16:00</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span>Sunday</span>
+                                            <span class="text-gray-400">Closed</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Amenities -->
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                                    <i class="fas fa-star text-blue-600"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="font-semibold text-gray-800 mb-2">Office Amenities</h4>
+                                    <div class="grid grid-cols-2 gap-2 text-sm text-gray-600">
+                                        <div class="flex items-center">
+                                            <i class="fas fa-wifi text-emerald-500 mr-2"></i>
+                                            <span>Free WiFi</span>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <i class="fas fa-coffee text-emerald-500 mr-2"></i>
+                                            <span>Refreshments</span>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <i class="fas fa-paw text-emerald-500 mr-2"></i>
+                                            <span>Pet Friendly</span>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <i class="fas fa-wheelchair text-emerald-500 mr-2"></i>
+                                            <span>Accessible</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Languages -->
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
+                                    <i class="fas fa-language text-purple-600"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="font-semibold text-gray-800 mb-2">Languages Spoken</h4>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="bg-white px-3 py-1 rounded-full text-sm border border-gray-200">English</span>
+                                        <span class="bg-white px-3 py-1 rounded-full text-sm border border-gray-200">Dutch</span>
+                                        <span class="bg-white px-3 py-1 rounded-full text-sm border border-gray-200">Swedish</span>
+                                        <span class="bg-white px-3 py-1 rounded-full text-sm border border-gray-200">Norwegian</span>
+                                        <span class="bg-white px-3 py-1 rounded-full text-sm border border-gray-200">German</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Appointment Booking -->
+                    <div class="appointment-booking bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl p-8 text-white shadow-xl fade-in-up">
+                        <h3 class="text-2xl font-light mb-2">Schedule Your Visit</h3>
+                        <p class="text-emerald-100 mb-6">Book a personal consultation at our office</p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between p-4 bg-white/10 rounded-xl">
+                                <div>
+                                    <div class="font-semibold">Standard Consultation</div>
+                                    <div class="text-emerald-100 text-sm">45-minute meeting</div>
+                                </div>
+                                <button class="bg-white text-emerald-600 px-4 py-2 rounded-lg font-semibold hover:bg-emerald-50 transition-colors">
+                                    Book Now
+                                </button>
+                            </div>
+                            
+                            <div class="flex items-center justify-between p-4 bg-white/10 rounded-xl">
+                                <div>
+                                    <div class="font-semibold">Property Tour</div>
+                                    <div class="text-emerald-100 text-sm">Office + location visit</div>
+                                </div>
+                                <button class="bg-white text-emerald-600 px-4 py-2 rounded-lg font-semibold hover:bg-emerald-50 transition-colors">
+                                    Book Now
+                                </button>
+                            </div>
+                            
+                            <div class="flex items-center justify-between p-4 bg-white/10 rounded-xl">
+                                <div>
+                                    <div class="font-semibold">Design Consultation</div>
+                                    <div class="text-emerald-100 text-sm">Nordic design experts</div>
+                                </div>
+                                <button class="bg-white text-emerald-600 px-4 py-2 rounded-lg font-semibold hover:bg-emerald-50 transition-colors">
+                                    Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Trust Elements & Social Proof -->
+            <div class="trust-social-proof mt-16 fade-in-up">
+                <div class="bg-slate-50 rounded-2xl p-8 shadow-lg border border-emerald-100">
+                    <h3 class="text-2xl font-light text-gray-800 mb-8 text-center">Trusted by Amsterdam Homeowners</h3>
+                    
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <!-- Stats -->
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-emerald-600 mb-2">2,500+</div>
+                            <div class="text-gray-600">Properties Sold</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-emerald-600 mb-2">98%</div>
+                            <div class="text-gray-600">Client Satisfaction</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-emerald-600 mb-2">15+</div>
+                            <div class="text-gray-600">Years Experience</div>
+                        </div>
+                    </div>
+
+                    <!-- Client Testimonials -->
+                    <div class="mt-12">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-6 text-center">What Our Clients Say</h4>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="bg-white p-6 rounded-xl border border-gray-200">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mr-4">
+                                        <i class="fas fa-user text-emerald-600"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-gray-800">Sarah Johnson</div>
+                                        <div class="text-emerald-600 text-sm">Amsterdam West</div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 italic">"The virtual tour helped us make our decision before even visiting. The Scandinavian design approach really stood out!"</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-xl border border-gray-200">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mr-4">
+                                        <i class="fas fa-user text-emerald-600"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-gray-800">Michael Berg</div>
+                                        <div class="text-emerald-600 text-sm">Jordaan District</div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 italic">"Outstanding service from start to finish. The office atmosphere reflects their commitment to Nordic design principles."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-emerald-500 rounded-lg"></div>
+                        <span class="text-2xl font-semibold">NordicEstates</span>
+                    </div>
+                    <p class="text-gray-400">Creating beautiful living spaces inspired by Scandinavian design principles.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="buy.html" class="hover:text-white transition-colors">Buy Properties</a></li>
+                        <li><a href="sell.html" class="hover:text-white transition-colors">Sell Your Property</a></li>
+                        <li><a href="rent.html" class="hover:text-white transition-colors">Rent a Home</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3"></i>
+                            <span>123 Keizersgracht, Amsterdam</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3"></i>
+                            <span>+31 20 123 4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <span>hello@nordicestates.nl</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Subscribe for market insights</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg text-gray-800 w-full">
+                        <button class="bg-emerald-500 px-4 py-2 rounded-r-lg hover:bg-emerald-600 transition-colors">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 NordicEstates. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Page Scripts -->
+     <script src="./js/contactpage.js/contacthero.js"></script>
+     <script src="./js/contactpage.js/contactform.js"></script>
+     <script src="./js/contactpage.js/expertmatch.js"></script>
+     <script src="./js/contactpage.js/officelocation.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,405 @@
+ /* Tenant Resources Section Styles */
+.tenant-resources-section {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+/* FAQ Styles */
+.faq-category {
+    margin-bottom: 2rem;
+}
+
+.faq-item {
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.faq-question {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 1rem 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.faq-question:hover {
+    background-color: #f9fafb;
+    border-color: #10b981;
+    transform: translateX(5px);
+}
+
+.faq-question.active {
+    background-color: #ecfdf5;
+    border-color: #10b981;
+}
+
+.faq-answer {
+    padding: 0 1.5rem 1rem;
+    background: white;
+    border-left: 3px solid #10b981;
+    margin-left: 1rem;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Resource Library Styles */
+.resource-item {
+    transition: all 0.3s ease;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid #e5e7eb;
+    background: white;
+    margin-bottom: 1rem;
+}
+
+.resource-item:hover {
+    background-color: #f9fafb;
+    transform: translateX(8px);
+    border-color: #10b981;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.resource-icon {
+    transition: all 0.3s ease;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.75rem;
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+    font-size: 1.25rem;
+}
+
+.resource-item:hover .resource-icon {
+    background: #10b981;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Interactive Tools Styles */
+.tool-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+.tool-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+    border-color: #10b981;
+}
+
+.tool-card h4 {
+    color: #1f2937;
+    font-weight: 600;
+}
+
+.calculator-input, .tool-card select, .tool-card textarea {
+    transition: all 0.3s ease;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    width: 100%;
+}
+
+.calculator-input:focus, .tool-card select:focus, .tool-card textarea:focus {
+    border-color: #10b981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+    outline: none;
+}
+
+/* Support Features Styles */
+.support-feature-card {
+    background: white;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+}
+
+.support-feature-card:hover {
+    border-color: #10b981;
+    transform: translateY(-5px);
+}
+
+.emergency-contact {
+    border-left: 4px solid #ef4444;
+    background: linear-gradient(135deg, #fef2f2 0%, #fecaca 100%);
+}
+
+.non-emergency-contact {
+    border-left: 4px solid #3b82f6;
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+}
+
+/* Form Styles */
+.tenant-form {
+    background: white;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    border: 1px solid #e5e7eb;
+}
+
+.tenant-form input, .tenant-form textarea, .tenant-form select {
+    transition: all 0.3s ease;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    width: 100%;
+}
+
+.tenant-form input:focus, .tenant-form textarea:focus, .tenant-form select:focus {
+    border-color: #10b981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+    outline: none;
+}
+
+/* Button Styles */
+.tenant-btn {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.tenant-btn-primary {
+    background: #10b981;
+    color: white;
+}
+
+.tenant-btn-primary:hover {
+    background: #059669;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.4);
+}
+
+.tenant-btn-secondary {
+    background: #f3f4f6;
+    color: #374151;
+    border: 1px solid #d1d5db;
+}
+
+.tenant-btn-secondary:hover {
+    background: #e5e7eb;
+    transform: translateY(-2px);
+}
+
+/* Document Storage Styles */
+.document-storage {
+    border: 2px dashed #d1d5db;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    background: #f9fafb;
+}
+
+.document-storage:hover {
+    border-color: #10b981;
+    background: #ecfdf5;
+}
+
+.document-storage.drag-over {
+    border-color: #10b981;
+    background: #d1fae5;
+    transform: scale(1.02);
+}
+
+.document-item {
+    display: flex;
+    justify-content: between;
+    align-items: center;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    background: white;
+    border: 1px solid #e5e7eb;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.document-item:hover {
+    border-color: #10b981;
+    transform: translateX(5px);
+}
+
+/* Community Forum Styles */
+.community-discussion {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: white;
+    border: 1px solid #e5e7eb;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.community-discussion:hover {
+    border-color: #10b981;
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Market Updates Styles */
+.subscription-card {
+    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+    border: 1px solid #a7f3d0;
+    border-radius: 0.75rem;
+    padding: 2rem;
+}
+
+.subscription-feature {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    color: #065f46;
+}
+
+.subscription-feature i {
+    margin-right: 0.5rem;
+    color: #10b981;
+}
+
+/* Animation Classes */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.stagger-delay-1 { animation-delay: 0.1s; }
+.stagger-delay-2 { animation-delay: 0.2s; }
+.stagger-delay-3 { animation-delay: 0.3s; }
+.stagger-delay-4 { animation-delay: 0.4s; }
+.stagger-delay-5 { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Progress Indicators */
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: #e5e7eb;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #10b981, #34d399);
+    border-radius: 3px;
+    transition: width 0.5s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tenant-resources-section .grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+    }
+    
+    .faq-category {
+        margin-bottom: 1.5rem;
+    }
+    
+    .resource-item {
+        padding: 1rem;
+    }
+    
+    .tool-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .support-feature-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .document-storage {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tenant-resources-section {
+        padding: 3rem 1rem;
+    }
+    
+    .faq-question {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .resource-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .resource-icon {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .tenant-resources-section {
+        background: white !important;
+    }
+    
+    .tool-card, .support-feature-card, .resource-item {
+        break-inside: avoid;
+        border: 1px solid #000 !important;
+        box-shadow: none !important;
+    }
+    
+    .tenant-btn, .interactive-element {
+        display: none !important;
+    }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .tenant-resources-section {
+        background: white;
+    }
+    
+    .tool-card, .support-feature-card, .resource-item {
+        border: 2px solid #000;
+    }
+    
+    .faq-question {
+        border: 2px solid #000;
+    }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    .fade-in-up, .resource-item, .tool-card, .support-feature-card,
+    .faq-question, .document-item, .community-discussion {
+        animation: none;
+        transition: none;
+    }
+    
+    .faq-answer {
+        animation: none;
+    }
+}

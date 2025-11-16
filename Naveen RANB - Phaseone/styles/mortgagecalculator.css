@@ -1,0 +1,244 @@
+/* === PHASE 5: Mortgage Calculator Styles === */
+
+.calculator-input-group {
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.calculator-input-group:hover {
+    background: rgba(255, 255, 255, 0.8);
+    border-color: #10b981;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.1);
+}
+
+/* Custom Slider Styles */
+.calculator-slider {
+    background: linear-gradient(to right, #10b981 0%, #10b981 var(--slider-progress, 50%), #e5e7eb var(--slider-progress, 50%), #e5e7eb 100%);
+}
+
+.calculator-slider::-webkit-slider-thumb {
+    appearance: none;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background: #10b981;
+    cursor: pointer;
+    border: 3px solid white;
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4);
+    transition: all 0.3s ease;
+}
+
+.calculator-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.6);
+}
+
+.calculator-slider::-moz-range-thumb {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background: #10b981;
+    cursor: pointer;
+    border: 3px solid white;
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4);
+    transition: all 0.3s ease;
+}
+
+.calculator-slider::-moz-range-thumb:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.6);
+}
+
+/* Loan Term Buttons */
+.loan-term-btn.active {
+    background: #10b981 !important;
+    color: white !important;
+    border-color: #10b981 !important;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.loan-term-btn:not(.active):hover {
+    border-color: #10b981;
+    background: #ecfdf5;
+}
+
+/* Mortgage Feature Checkboxes */
+.mortgage-feature:checked {
+    background-color: #10b981;
+    border-color: #10b981;
+}
+
+.mortgage-feature:focus {
+    grid: 2px;
+    border-color: #10b981;
+}
+
+/* Results Card Animations */
+#monthly-payment {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+}
+
+/* Amortization Chart */
+.amortization-year {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem;
+    background: #f8fafc;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.amortization-year:hover {
+    background: #ecfdf5;
+    transform: translateX(4px);
+}
+
+.amortization-bar {
+    height: 8px;
+    background: linear-gradient(90deg, #10b981, #34d399);
+    border-radius: 4px;
+    transition: all 0.5s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.amortization-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* Calculator Button Animations */
+.calculate-mortgage-btn,
+.reset-calculator-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.calculate-mortgage-btn::before,
+.reset-calculator-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.calculate-mortgage-btn:hover::before,
+.reset-calculator-btn:hover::before {
+    left: 100%;
+}
+
+/* Loading State */
+.calculator-loading {
+    opacity: 0.7;
+    pointer-events: none;
+    position: relative;
+}
+
+.calculator-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #e5e7eb;
+    border-top: 2px solid #10b981;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Results Animation */
+.calculator-result {
+    animation: slideInUp 0.6s ease-out;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .calculator-input-group {
+        padding: 1rem;
+    }
+    
+    #monthly-payment {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .calculator-slider::-webkit-slider-thumb {
+        height: 20px;
+        width: 20px;
+    }
+    
+    .loan-term-btn {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.875rem;
+    }
+    
+    .amortization-year {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}
+
+/* Value Change Animations */
+.value-change {
+    animation: valuePulse 0.6s ease;
+}
+
+@keyframes valuePulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Print Styles */
+@media print {
+    .calculator-input-group,
+    .calculate-mortgage-btn,
+    .reset-calculator-btn {
+        display: none;
+    }
+    
+    .bg-gradient-to-br {
+        background: #10b981 !important;
+    }
+}
